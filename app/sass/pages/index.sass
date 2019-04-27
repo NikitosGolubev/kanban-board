@@ -1,0 +1,125 @@
+@import ../settings
+
+.page-body
+  @include setBgImg('../images/background.svg', 'center center no-repeat')
+  background-size: cover
+  min-height: 100vh
+
+$small_gap: 1.2vmin
+$standard_gap: 1.7vmin
+$big_gap: 2.2vmin
+$column_container_gap: 3vmin
+
+/* Columns */
+
+.columns-container
+  display: grid
+  grid-gap: $standard_gap
+  padding: $column_container_gap
+  grid-template-columns: repeat(4, 1fr)
+  align-items: start
+
+.column
+  &_wrap, &__header, &__panel_wrap
+    background-color: color(secondary)
+
+    & .simplebar-scrollbar:before
+      background: color(alternative)
+
+  &_wrap
+    border-radius: $default_border_radius
+    max-height: calc(100vmin - #{($standard_gap * 2) + ($column_container_gap * 2)})
+
+  &__panel_wrap, &__content
+    padding: 0 $standard_gap
+
+  &__header, &__panel_wrap
+    z-index: 1
+    left: 0
+    position: relative
+
+  &__header
+    border-radius: $default_border_radius
+    padding: $standard_gap
+    font-family: font(alternative)
+    top: 0
+
+  &__panel
+    padding: $standard_gap 0
+    &_wrap
+      // fixes small visual bug with shadow (dunno how)
+      border-top: 1px solid transparent
+      border-radius: $default_border_radius
+      bottom: 0
+
+/* Records */
+
+.record
+  background-color: color(light)
+  border-radius: $default_border_radius
+  padding: 2vmin
+  margin: $small_gap 0
+  box-shadow: $default_shadow
+  cursor: pointer
+  @extend %fastTransition
+
+  &:first-child
+    margin-top: 0
+
+  &:last-child
+    margin-bottom: 0
+
+  &_drug
+    background: color(primary)
+    color: color(light)
+
+  &__content
+    word-break: break-word
+
+/* Add record panel */
+
+.add-record
+  display: flex
+  color: color(alternative)
+  @extend %fastTransition
+  cursor: pointer
+  user-select: none
+
+  &__img
+    width: $medium_font_size
+    margin-right: $small_gap
+    @extend %fastTransition
+    fill: color(alternative)
+
+  &:hover
+    color: color(muted)
+
+  &:hover &__img
+    fill: color(muted)
+
+  &:active
+    color: color(light)
+
+  &:active &__img
+    fill: color(light)
+
+/* Add column/record panel */
+.add-form
+  &__close-img
+    width: $medium_font_size
+    @extend %fastTransition
+    fill: color(alternative)
+    cursor: pointer
+
+    &:hover
+      fill: color(primary)
+
+    &:active
+      fill: color(light)
+
+  &__controls
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: $small_gap
+    

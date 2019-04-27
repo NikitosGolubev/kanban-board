@@ -1,0 +1,147 @@
+.record, .add-record, .add-record__img, .add-form__close-img {
+  -webkit-transition: 0.2s all;
+  -o-transition: 0.2s all;
+  transition: 0.2s all; }
+
+/**
+ * Retrieves color from "colors" map
+ *
+ * @param  {String} $color_name Color key
+ * @return {Null|Color}
+ */
+/**
+ * Retrieves font from "fonts" map
+ *
+ * @param  {String} $font_name Font key
+ * @return {Null|String}
+ */
+/**
+ * Sets background image
+ *
+ * @param {String} $path_to_bg - path to background image
+ * @param {String} $bg_settings = "" - properties that can be added to bg,
+ *     for instance: "center center no-repeat"
+ * @param {Boolean} $is_default = true - if it's true than it's assumed that path
+ *     to images folder starts from exit of current folder
+ * @param {Color} $default_color = transparent - bg color under bg img
+ */
+.page-body {
+  background: transparent url("../../images/background.svg") center center no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  min-height: 100vh; }
+
+/* Columns */
+.columns-container {
+  display: grid;
+  grid-gap: 1.7vmin;
+  padding: 3vmin;
+  grid-template-columns: repeat(4, 1fr);
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start; }
+
+.column_wrap, .column__header, .column__panel_wrap {
+  background-color: #DFE3E6; }
+  .column_wrap .simplebar-scrollbar:before, .column__header .simplebar-scrollbar:before, .column__panel_wrap .simplebar-scrollbar:before {
+    background: #6B808C; }
+
+.column_wrap {
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  max-height: -webkit-calc(100vmin - 9.4vmin);
+  max-height: calc(100vmin - 9.4vmin); }
+
+.column__panel_wrap, .column__content {
+  padding: 0 1.7vmin; }
+
+.column__header, .column__panel_wrap {
+  z-index: 1;
+  left: 0;
+  position: relative; }
+
+.column__header {
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  padding: 1.7vmin;
+  font-family: "Montserrat Bold";
+  top: 0; }
+
+.column__panel {
+  padding: 1.7vmin 0; }
+  .column__panel_wrap {
+    border-top: 1px solid transparent;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+    bottom: 0; }
+
+/* Records */
+.record {
+  background-color: #fff;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  padding: 2vmin;
+  margin: 1.2vmin 0;
+  -webkit-box-shadow: 0px 2px 4px rgba(107, 128, 140, 0.6);
+          box-shadow: 0px 2px 4px rgba(107, 128, 140, 0.6);
+  cursor: pointer; }
+  .record:first-child {
+    margin-top: 0; }
+  .record:last-child {
+    margin-bottom: 0; }
+  .record_drug {
+    background: #39C071;
+    color: #fff; }
+  .record__content {
+    word-break: break-word; }
+
+/* Add record panel */
+.add-record {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #6B808C;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .add-record__img {
+    width: 2.6vmin;
+    margin-right: 1.2vmin;
+    fill: #6B808C; }
+  .add-record:hover {
+    color: #C9D2D9; }
+  .add-record:hover .add-record__img {
+    fill: #C9D2D9; }
+  .add-record:active {
+    color: #fff; }
+  .add-record:active .add-record__img {
+    fill: #fff; }
+
+/* Add column/record panel */
+.add-form__close-img {
+  width: 2.6vmin;
+  fill: #6B808C;
+  cursor: pointer; }
+  .add-form__close-img:hover {
+    fill: #39C071; }
+  .add-form__close-img:active {
+    fill: #fff; }
+
+.add-form__controls {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.2vmin; }

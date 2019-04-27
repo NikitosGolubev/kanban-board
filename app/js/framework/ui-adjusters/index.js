@@ -12,15 +12,19 @@ assignScrollToColumns();
 makeColumnElementsSticky();
 configureDragDropBtwRecords();
 
-// Window resize
+// On window resize, keep columns responsive
 window.addEventListener('resize', () => {
-   assignScrollToColumns();
+    let columns = document.querySelectorAll('.js-column_wrap');
+    columns.forEach((column) => {
+        column.style.width = 100+'%';
+    });
 });
 
 /**
  * Assigns scrollbars to columns (they are scrollable)
  */
 function assignScrollToColumns() {
+   SimpleBar.removeObserver();
    let columns = document.querySelectorAll('.js-column_wrap');
    let scrollOptions = {};
    columns.forEach((column) => {

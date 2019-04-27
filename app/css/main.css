@@ -126,7 +126,8 @@ h1, h2, h3, h4, h5, h6,
   width: calc(100% - 4vmin);
   color: #6B808C;
   -webkit-box-shadow: 0px 2px 4px rgba(107, 128, 140, 0.6);
-          box-shadow: 0px 2px 4px rgba(107, 128, 140, 0.6); }
+          box-shadow: 0px 2px 4px rgba(107, 128, 140, 0.6);
+  font-size: 2.1vmin; }
 
 /* Buttons, labels */
 .btn {
@@ -135,7 +136,8 @@ h1, h2, h3, h4, h5, h6,
   cursor: pointer;
   -webkit-border-radius: 3px;
           border-radius: 3px;
-  background: none; }
+  background: none;
+  font-size: 2.1vmin; }
   .btn:hover {
     -webkit-box-shadow: inset 0px 2px 4px rgba(107, 128, 140, 0.6);
             box-shadow: inset 0px 2px 4px rgba(107, 128, 140, 0.6); }

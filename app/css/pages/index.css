@@ -50,8 +50,8 @@
 .column_wrap {
   -webkit-border-radius: 3px;
           border-radius: 3px;
-  max-height: -webkit-calc(100vmin - 9.4vmin);
-  max-height: calc(100vmin - 9.4vmin); }
+  max-height: -webkit-calc(100vmin - 6.4vmin);
+  max-height: calc(100vmin - 6.4vmin); }
 
 .column__panel_wrap, .column__content {
   padding: 0 1.7vmin; }

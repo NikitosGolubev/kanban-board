@@ -29,7 +29,7 @@ let paths = {
 		compileDest: "app/css"
 	},
 	js: {
-		compileJsSrc: "app/js/framework/**/*.js",
+		compileJsSrc: "app/js/bootstrap/**/*.js",
 		compileJsDest: "app/js/build",
 		src: ["app/js/**/*.js", "!app/js/build/**/*.js"],
 		loadSrc: "app/js/build/**/*.js",

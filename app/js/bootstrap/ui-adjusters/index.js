@@ -1,6 +1,6 @@
 /**
  * @fileOverview UI adjusters for index page
- * @namespace NikitosGolubev\Framework\UiAdjusters
+ * @namespace NikitosGolubev\Bootstrap\UiAdjusters
  */
 
 import stickybits from 'stickybits';

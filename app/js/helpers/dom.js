@@ -11,7 +11,7 @@ class DOM {
      * @param  {String} parentClassName
      * @return {Object|Boolean} DOM element OR FALSE(not found)
      */
-    static findParentByClassName(childElement, parentClassName) {
+    findParentByClassName(childElement, parentClassName) {
         // If given child IS the element that should be found. (when unaware of if it's child elem or not)
         if (childElement.classList.contains(parentClassName)) return childElement;
 

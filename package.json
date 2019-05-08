@@ -28,10 +28,9 @@
     "jsdoc": "^3.5.5"
   },
   "dependencies": {
-    "nice-bar": "^1.0.11",
+    "animate.css": "^3.7.0",
     "simplebar": "^4.0.0-alpha.6",
     "sortablejs": "^1.9.0",
-    "stickybits": "^3.6.5",
-    "stickyfill": "^1.1.1-strict"
+    "stickybits": "^3.6.5"
   }
 }

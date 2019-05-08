@@ -4,6 +4,7 @@
  */
 
 import Controller from "./controller";
+import view from "../use-cases/print-view";
 
 /**
  * @extends Controller
@@ -15,10 +16,25 @@ class RecordsController extends Controller {
 
     /**
      * Create record form
-     * @param event
+     * @param {object} data Expects: {event: eventObj}
      */
-    create(event) {
-        console.log(this.model);
+    create(data) {
+        let createElem = this.dom.findParentByClassName(data.event.target, 'js-show-add-record-form');
+        if (createElem) {
+            view(this.view, {createElem: createElem});
+        }
+    }
+
+    /**
+     * Hides create record form.
+     * @param {object} data Expects: {event, eventObj}
+     */
+    hideCreate(data) {
+        let closeElem = this.dom.findParentByClassName(event.target, 'js-close-add-record-form');
+        if (closeElem) {
+            let addForm = this.dom.findParentByClassName(closeElem, 'js-add-form');
+            view(this.view, {addForm: addForm});
+        }
     }
 }
 

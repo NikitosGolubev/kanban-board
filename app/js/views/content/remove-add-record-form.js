@@ -1,5 +1,5 @@
 /**
- * @fileOverview Pastes add record form to template.
+ * @fileOverview Pastes add record button and hides add record form.
  * @namespace NikitosGolubev\Views\Content
  */
 
@@ -9,12 +9,12 @@ import View from '../view';
 import RemoveElement from '../layouts/remove-element';
 
 /* UI factories */
-import AddRecordFormFactory from '../../ui-factories/simple/add-record-form-factory';
+import AddRecordButtonFactory from "../../ui-factories/simple/add-record-button-factory";
 
 /**
  * @implements View, Observer
  */
-class AddRecordForm extends View {
+class RemoveAddRecordForm extends View {
     constructor(model) {
         super(model);
     }
@@ -27,25 +27,25 @@ class AddRecordForm extends View {
     /**
      * @see View.main()
      *
-     * @param {object} $data Expected: {createElem: DOMElemTriggeredWithEvent}
+     * @param {object} $data Expected: {addForm: DOMElement}
      */
     main($data = false) {
-        let controlsContainer = $data.createElem.parentNode;
+        let controlsContainer = $data.addForm.parentNode;
 
-        this.removeElement($data.createElem);
+        this.removeElement($data.addForm);
 
-        let form = this.createAddRecordForm();
+        let button = this.createAddRecordButton();
 
-        controlsContainer.appendChild(form);
+        controlsContainer.appendChild(button);
     }
 
     /**
      * @private
      * @return {Object} DOM
      */
-    createAddRecordForm() {
-        let formFactory = new AddRecordFormFactory;
-        return formFactory.get();
+    createAddRecordButton() {
+        let buttonFactory = new AddRecordButtonFactory();
+        return buttonFactory.get();
     }
 
     /**
@@ -58,4 +58,4 @@ class AddRecordForm extends View {
     }
 }
 
-export default AddRecordForm;
+export default RemoveAddRecordForm;

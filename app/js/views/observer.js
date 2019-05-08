@@ -8,8 +8,10 @@
  */
 class Observer {
     constructor(model) {
-        this.model = model;
-        this.model.registerObserver(this);
+        if (model !== false) {
+            this.model = model;
+            this.model.registerObserver(this);
+        }
     }
 
     /**

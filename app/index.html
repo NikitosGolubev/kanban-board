@@ -8,9 +8,9 @@
     <title>Kanban board for VK</title>
     <!-- Styles -->
     <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../node_modules/simplebar/dist/simplebar.min.css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link rel="stylesheet" href="css/pages/index.css" type="text/css">
-    <link rel="stylesheet" href="../node_modules/simplebar/dist/simplebar.min.css" />
 </head>
 <body class="js-page-body page-body">
     <main>
@@ -45,9 +45,9 @@
                         </div>
                     </div>
                     <footer class="js-column__panel_wrap column__panel_wrap">
-                        <div class="js-show-add-record-form add-record column__panel">
+                        <div class="js-show-add-record-form add-btn column__panel">
                             <div>
-                                <svg class="add-record__img" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="add-btn__img" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M14.1412 6.64122H8.35878V0.858779C8.35878 0.400763 7.95802 0 7.5 0C7.04198 0 6.64122 0.400763 6.64122 0.858779V6.64122H0.858779C0.400763 6.64122 0 7.04198 0 7.5C0 7.95801 0.400763 8.35878 0.858779 8.35878H6.64122V14.1412C6.64122 14.5992 7.04198 15 7.5 15C7.95802 15 8.35878 14.5992 8.35878 14.1412V8.35878H14.1412C14.5992 8.35878 15 7.95801 15 7.5C15 7.04198 14.5992 6.64122 14.1412 6.64122Z" />
                                 </svg>
                             </div>
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                     <footer class="js-column__panel_wrap column__panel_wrap">
-                        <div class="add-form column__panel">
+                        <div class="js-add-form add-form column__panel">
                             <div>
                                 <textarea class="field" placeholder="Введите название карточки"></textarea>
                             </div>
@@ -82,7 +82,7 @@
                                     <button class="btn btn_primary">Добавить карточку</button>
                                 </div>
                                 <div>
-                                    <svg class="add-form__close-img" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="js-close-add-record-form add-form__close-img" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 6.71875L14.2188 0L15 0.78125L8.28125 7.5L15 14.2188L14.2188 15L7.5 8.28125L0.78125 15L0 14.2188L6.71875 7.5L0 0.78125L0.78125 0L7.5 6.71875Z" />
                                     </svg>
                                 </div>
@@ -100,10 +100,10 @@
                             </div>
                             <div class="add-form__controls">
                                 <div>
-                                    <button class="btn btn_primary">Добавить карточку</button>
+                                    <button class="btn btn_primary">Добавить колонку</button>
                                 </div>
                                 <div>
-                                    <svg class="add-form__close-img" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="js-remove-empty-column add-form__close-img" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 6.71875L14.2188 0L15 0.78125L8.28125 7.5L15 14.2188L14.2188 15L7.5 8.28125L0.78125 15L0 14.2188L6.71875 7.5L0 0.78125L0.78125 0L7.5 6.71875Z" />
                                     </svg>
                                 </div>
@@ -112,17 +112,17 @@
                     </footer>
                 </div>
             </section>
-            <section class="js-column_wrap column_wrap">
-                <div class="column">
+            <section class="js-last-service-column js-column_wrap column_wrap">
+                <div class="js-column column">
                     <footer class="js-column__panel_wrap column__panel_wrap">
-                        <div class="add-record column__panel">
+                        <div class="js-create-empty-column add-btn column__panel">
                             <div>
-                                <svg class="add-record__img" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="add-btn__img" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M14.1412 6.64122H8.35878V0.858779C8.35878 0.400763 7.95802 0 7.5 0C7.04198 0 6.64122 0.400763 6.64122 0.858779V6.64122H0.858779C0.400763 6.64122 0 7.04198 0 7.5C0 7.95801 0.400763 8.35878 0.858779 8.35878H6.64122V14.1412C6.64122 14.5992 7.04198 15 7.5 15C7.95802 15 8.35878 14.5992 8.35878 14.1412V8.35878H14.1412C14.5992 8.35878 15 7.95801 15 7.5C15 7.04198 14.5992 6.64122 14.1412 6.64122Z" />
                                 </svg>
                             </div>
                             <div>
-                                Добавить еще одну карточку
+                                Добавить еще одну колонку
                             </div>
                         </div>
                     </footer>

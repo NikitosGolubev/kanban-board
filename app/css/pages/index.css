@@ -1,4 +1,4 @@
-.record, .add-record, .add-record__img, .add-form__close-img {
+.record, .add-btn, .add-btn__img, .add-form__close-img {
   -webkit-transition: 0.2s all;
   -o-transition: 0.2s all;
   transition: 0.2s all; }
@@ -97,7 +97,7 @@
     word-break: break-word; }
 
 /* Add record panel */
-.add-record {
+.add-btn {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -108,17 +108,17 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
-  .add-record__img {
+  .add-btn__img {
     width: 2.6vmin;
     margin-right: 1.2vmin;
     fill: #6B808C; }
-  .add-record:hover {
+  .add-btn:hover {
     color: #C9D2D9; }
-  .add-record:hover .add-record__img {
+  .add-btn:hover .add-btn__img {
     fill: #C9D2D9; }
-  .add-record:active {
+  .add-btn:active {
     color: #fff; }
-  .add-record:active .add-record__img {
+  .add-btn:active .add-btn__img {
     fill: #fff; }
 
 /* Add column/record panel */

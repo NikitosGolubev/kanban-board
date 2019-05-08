@@ -15,16 +15,16 @@ class Router {
     /**
      * Default method which wraps the calls to logic.
      *
-     * @param event
+     * @param data
      * @param controllerObj
      * @param method
      * @param $handler
      */
-    static run(event, controllerObj, method, $handler = false) {
+    static run(data, controllerObj, method, $handler = false) {
         if (!($handler instanceof Handler)) $handler = new DefaultHandler();
 
         try {
-            controllerObj[method](event);
+            controllerObj[method](data);
         } catch (e) {
             $handler.handle(e);
         }

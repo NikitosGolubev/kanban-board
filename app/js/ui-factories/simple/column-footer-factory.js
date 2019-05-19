@@ -15,9 +15,9 @@ class ColumnFooterFactory extends UiFactory {
 
     /**
      * @see UiFactory.build()
-     * @param {object} data {children: [DOMchild1, DOMchild2, ...]} <- Optional
+     * @param {{children: array}}
      */
-    build(data) {
+    build({children=false}) {
         // footer
         let footer = document.createElement('footer');
         footer.classList.add('js-column__panel_wrap');
@@ -25,9 +25,9 @@ class ColumnFooterFactory extends UiFactory {
 
 
         // pasting children if they are provided
-        if (Array.isArray(data.children)) {
-            for (let i = 0; i < data.children.length; i++) {
-                footer.appendChild(data.children[i]);
+        if (Array.isArray(children)) {
+            for (let i = 0; i < children.length; i++) {
+                footer.appendChild(children[i]);
             }
         }
 

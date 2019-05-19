@@ -1,15 +1,15 @@
 /**
- * @fileOverview Column model
+ * @fileOverview Column model. Blueprint for building column.
  * @namespace NikitosGolubev\Models\Content\CookieType\Record
  */
 
-import Cookie from '../../types/cookie';
+import LocalStorage from '../../types/local-storage';
 
 /**
  * Represents Record in 'columns' storage
- * @extends Cookie
+ * @extends LocalStorage
  */
-class Column extends Cookie {
+class Column extends LocalStorage {
     constructor() {
         super();
     }

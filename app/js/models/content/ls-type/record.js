@@ -3,13 +3,13 @@
  * @namespace NikitosGolubev\Models\Content\CookieType\Record
  */
 
-import Cookie from '../../types/cookie';
+import LocalStorage from '../../types/local-storage';
 
 /**
  * Represents Record in 'records' storage
- * @extends Cookie
+ * @extends LocalStorage
  */
-class Record extends Cookie {
+class Record extends LocalStorage {
     constructor() {
         super();
     }

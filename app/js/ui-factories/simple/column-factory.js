@@ -15,13 +15,14 @@ class ColumnFactory extends UiFactory {
 
     /**
      * @see UiFactory.build()
-     * @param {object} data {children: [DOMchild1, DOMchild2, ...]} <- Optional
+     * @param {{children: array, id: int}}
      */
-    build(data) {
+    build({children=false, id="none"}) {
         // column wrap
         let column = document.createElement('section');
         column.classList.add('js-column_wrap');
         column.classList.add('column_wrap');
+        column.setAttribute('data-column-id', id);
 
         // column body
         let columnBody = document.createElement('div');
@@ -29,9 +30,9 @@ class ColumnFactory extends UiFactory {
         columnBody.classList.add('column');
 
         // pasting children to column if they are provided
-        if (Array.isArray(data.children)) {
-            for (let i = 0; i < data.children.length; i++) {
-                columnBody.appendChild(data.children[i]);
+        if (Array.isArray(children)) {
+            for (let i = 0; i < children.length; i++) {
+                columnBody.appendChild(children[i]);
             }
         }
 

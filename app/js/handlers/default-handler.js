@@ -15,7 +15,7 @@ class DefaultHandler extends Handler {
      * @param exception
      */
     handle(exception) {
-        // There exceptions could be handled
+        console.error(exception.message);
     }
 }
 

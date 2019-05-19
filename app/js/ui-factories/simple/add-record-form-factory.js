@@ -44,9 +44,11 @@ class AddRecordFormFactory extends UiFactory {
      */
     build(data) {
         let formContainer = this.uiObjects.get('formContainer').get();
+        formContainer.classList.add('js-create-record-form');
 
         let textareaContainer = document.createElement('div');
         let textarea = this.uiObjects.get('textarea').get(); // Textarea
+        textarea.classList.add('js-record-name-input');
         textareaContainer.appendChild(textarea);
 
         let formControlsContainer = this.uiObjects.get('formControlsContainer').get(); // Div for controls
@@ -71,6 +73,7 @@ class AddRecordFormFactory extends UiFactory {
     getAddBtn() {
         let addBtn = document.createElement('div');
         let btn = this.uiObjects.get('addBtn').get();
+        btn.classList.add('js-create-record');
         addBtn.appendChild(btn);
         return addBtn;
     }

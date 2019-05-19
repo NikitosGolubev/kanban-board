@@ -3,6 +3,9 @@
  * @namespace NikitosGolubev\UiFactories\Simple
  */
 
+import cloneDeepWith from 'lodash/cloneDeepWith';
+import isElement from 'lodash/isElement';
+
 /**
  * Interface for simple factories of user interface
  * @abstract
@@ -25,7 +28,13 @@ class UiFactory {
     /**
      * @return {object|null} Created DOM(ui) element
      */
-    get() { return this.elem; }
+    get() {
+        return cloneDeepWith(this.elem, (value) => {
+            if (isElement(value)) {
+                return value.cloneNode(true);
+            }
+        });
+    }
 
     /**
      * Creates a UI element

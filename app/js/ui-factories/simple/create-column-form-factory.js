@@ -44,9 +44,11 @@ class CreateColumnFormFactory extends UiFactory {
      */
     build(data) {
         let formContainer = this.uiObjects.get('formContainer').get();
+        formContainer.classList.add('js-create-column-form');
 
         let inputContainer = document.createElement('div');
-        let input = this.uiObjects.get('input').get(); // Textarea
+        let input = this.uiObjects.get('input').get();
+        input.classList.add('js-column-name-input');
         inputContainer.appendChild(input);
 
         let formControlsContainer = this.uiObjects.get('formControlsContainer').get(); // Div for controls
@@ -71,6 +73,7 @@ class CreateColumnFormFactory extends UiFactory {
     getAddBtn() {
         let addBtn = document.createElement('div');
         let btn = this.uiObjects.get('addBtn').get();
+        btn.classList.add('js-create-column');
         addBtn.appendChild(btn);
         return addBtn;
     }

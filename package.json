@@ -29,8 +29,12 @@
   },
   "dependencies": {
     "animate.css": "^3.7.0",
+    "local-storage": "^2.0.0",
+    "lodash": "^4.17.11",
     "simplebar": "^4.0.0-alpha.6",
     "sortablejs": "^1.9.0",
-    "stickybits": "^3.6.5"
+    "stickybits": "^3.6.5",
+    "umbrellajs": "^3.1.0",
+    "validator": "^10.11.0"
   }
 }

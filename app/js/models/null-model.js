@@ -13,8 +13,9 @@ class NullModel extends Model {
         super();
     }
 
-    add(data) {}
-    get() {}
+    init() {}
+    add(data) { return {}; }
+    get() { return []; }
 }
 
 export default NullModel;

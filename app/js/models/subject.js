@@ -23,7 +23,7 @@ class Subject {
         }
     }
 
-    notifyObservers(data) {
+    notify(data) {
         for (let i = 0; i < this.observers.length; i++) {
             this.observers[i].update(data);
         }

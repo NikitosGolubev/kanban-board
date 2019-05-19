@@ -17,16 +17,28 @@ class Router {
      *
      * @param data
      * @param controllerObj
-     * @param method
+     * @param {string} $method If omitted, then view is gonna be printed.
      * @param $handler
      */
-    static run(data, controllerObj, method, $handler = false) {
+    static run(data, controllerObj, $method = 'printView', $handler = false) {
         if (!($handler instanceof Handler)) $handler = new DefaultHandler();
 
         try {
-            controllerObj[method](data);
+            controllerObj[$method](data);
         } catch (e) {
             $handler.handle(e);
+        }
+    }
+
+
+    /**
+     * Runs several calls to logic in order.
+     * @param {array} params Expected [[data, controller, $method = 'printView', $handler = false], ....]
+     */
+    static multipleRun(params) {
+        for (let i = 0; i < params.length; i++) {
+            let [data, controller, method="printView", handler=false] = params[i];
+            Router.run(data, controller, method, handler);
         }
     }
 }

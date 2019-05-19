@@ -1,6 +1,6 @@
 /**
  * @fileOverview Prints view
- * @namespace NikitosGolubev\UseCases\PrintView
+ * @namespace NikitosGolubev\UseCases
  */
 
 /**

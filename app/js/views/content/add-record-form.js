@@ -15,6 +15,8 @@ import AddRecordFormFactory from '../../ui-factories/simple/add-record-form-fact
  * @implements View, Observer
  */
 class AddRecordForm extends View {
+    namespace() { return 'NikitosGolubev\\Views\\Content\\AddRecordForm'; }
+
     constructor(model) {
         super(model);
     }

@@ -3,11 +3,17 @@
  * @namespace NikitosGolubev\Models
  */
 
+import Core from '../framework/core';
+
 /**
  * Implements API to be able to notify objects about events.
+ * @extends Core
  */
-class Subject {
+class Subject extends Core {
+    namespace() { return 'NikitosGolubev\\Models\\Subject'; }
+
     constructor() {
+        super();
         this.observers = [];
     }
 

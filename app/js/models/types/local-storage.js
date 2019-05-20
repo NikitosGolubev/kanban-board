@@ -11,6 +11,8 @@ import ls from 'local-storage';
  * @extends Model
  */
 class LocalStorage extends Model {
+    namespace() { return 'NikitosGolubev\\Models\\Types\\LocalStorage'; }
+
     constructor() {
         super();
 

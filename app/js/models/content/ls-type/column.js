@@ -10,6 +10,8 @@ import LocalStorage from '../../types/local-storage';
  * @extends LocalStorage
  */
 class Column extends LocalStorage {
+    namespace() { return 'NikitosGolubev\\Models\\Content\\LsType\\Column'; }
+
     constructor() {
         super();
     }

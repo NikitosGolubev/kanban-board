@@ -3,10 +3,16 @@
  * @namespace NikitosGolubev\Controllers
  */
 
-import view from "../use-cases/print-view";
+import Core from '../framework/core';
 
-class Controller {
+/**
+ * @extends Core
+ */
+class Controller extends Core {
+    namespace() { return 'NikitosGolubev\\Controllers\\Controller'; }
+
     constructor(model, view) {
+        super();
         this.model = model;
         this.view = view;
         this.model.init();
@@ -18,7 +24,7 @@ class Controller {
      *     necessary for view. {event: eventObj, somethingElse1: something1, .... smthN: yourVal}
      */
     printView(data) {
-        view(this.view, data);
+        this.view.main(data);
     }
 }
 

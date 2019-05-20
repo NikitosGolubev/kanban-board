@@ -9,6 +9,8 @@ import Layout from "../layout";
  * Removes particular element from DOM
  */
 class RemoveElement extends Layout {
+    namespace() { return 'NikitosGolubev\\Views\\Layouts\\RemoveElement'; }
+
     constructor() {
         super();
     }

@@ -15,6 +15,8 @@ import {createRecord} from "../use-cases/create-record";
  * @extends Controller
  */
 class RecordsController extends Controller {
+    namespace() { return 'NikitosGolubev\\Controllers\\RecordsController'; }
+
     constructor(model, view) {
         super(model, view);
     }

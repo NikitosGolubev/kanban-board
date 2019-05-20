@@ -11,6 +11,8 @@ import ReadyRecordFactory from "../../ui-factories/simple/ready-record-factory";
  * @implements View, Observer
  */
 class ReadyRecord extends View {
+    namespace() { return 'NikitosGolubev\\Views\\Content\\ReadyRecord'; }
+
     constructor(model) {
         super(model);
     }

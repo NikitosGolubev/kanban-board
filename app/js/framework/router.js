@@ -1,10 +1,10 @@
 /**
  * @fileOverview Base router.
- * @namespace NikitosGolubev
+ * @namespace NikitosGolubev\Framework
  */
 
-import Handler from './handlers/handler';
-import DefaultHandler from './handlers/default-handler';
+import Handler from '../handlers/handler';
+import DefaultHandler from '../handlers/default-handler';
 
 /**
  * Provides some common API for all routers

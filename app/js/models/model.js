@@ -13,6 +13,8 @@ import config from '../configs/default';
  * @extends Subject
  */
 class Model extends Subject {
+    namespace() { return 'NikitosGolubev\\Models\\Model'; }
+
     constructor() {
         super();
         this.cfg = config();

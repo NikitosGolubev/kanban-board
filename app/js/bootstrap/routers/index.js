@@ -3,8 +3,11 @@
  * @namespace NikitosGolubev\Bootstrap\Routers
  */
 
-import Router from '../../router';
+import Router from '../../framework/router';
 import u from "umbrellajs";
+
+// Service providers
+
 
 // Models
 import NullModel from '../../models/null-model';

@@ -11,6 +11,8 @@ import Observer from './observer';
  * @interface
  */
 class View extends Observer {
+    namespace() { return 'NikitosGolubev\\Views\\View'; }
+
     constructor(model) {
         super(model);
     }

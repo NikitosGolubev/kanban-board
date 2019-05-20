@@ -15,6 +15,8 @@ import AddRecordButtonFactory from "../../ui-factories/simple/add-record-button-
  * @implements View, Observer
  */
 class RemoveAddRecordForm extends View {
+    namespace() { return 'NikitosGolubev\\Views\\Content\\RemoveAddRecordForm'; }
+
     constructor(model) {
         super(model);
     }

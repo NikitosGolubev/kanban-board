@@ -11,6 +11,8 @@ import FieldMessageFactory from "../../../ui-factories/simple/field-message-fact
  * @extends ValidationView
  */
 class FieldValidationMessage extends ValidationView {
+    namespace() { return 'NikitosGolubev\\Views\\Content\\Validation\\FieldValidationMessage'; }
+
     constructor(model) {
         super(model);
         this.messageFactory = new FieldMessageFactory();

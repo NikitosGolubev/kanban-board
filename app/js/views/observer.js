@@ -3,11 +3,17 @@
  * @namespace NikitosGolubev\Views
  */
 
+import Core from '../framework/core';
+
 /**
  * @abstract
+ * @extends Core
  */
-class Observer {
+class Observer extends Core {
+    namespace() { return 'NikitosGolubev\\Views\\Observer'; }
+
     constructor(model) {
+        super();
         if (model !== false) {
             this.model = model;
             this.model.registerObserver(this);

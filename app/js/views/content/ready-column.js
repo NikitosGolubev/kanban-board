@@ -10,6 +10,8 @@ import ReadyColumnFactory from "../../ui-factories/simple/ready-column-factory";
  * @implements View, Observer
  */
 class ReadyColumn extends View {
+    namespace() { return 'NikitosGolubev\\Views\\Content\\ReadyColumn'; }
+
     constructor(model) {
         super(model);
     }

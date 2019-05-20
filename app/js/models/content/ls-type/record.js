@@ -10,10 +10,11 @@ import LocalStorage from '../../types/local-storage';
  * @extends LocalStorage
  */
 class Record extends LocalStorage {
+    namespace() { return 'NikitosGolubev\\Models\\Content\\LsType\\Record'; }
+
     constructor() {
         super();
     }
-
 }
 
 export default Record;

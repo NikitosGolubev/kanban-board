@@ -15,6 +15,8 @@ import EmptyColumnFactory from "../../ui-factories/simple/empty-column-factory";
  * @implements View, Observer
  */
 class EmptyColumn extends View {
+    namespace() { return 'NikitosGolubev\\Views\\Content\\EmptyColumn'; }
+
     constructor(model) {
         super(model);
     }

@@ -4,17 +4,19 @@
  */
 
 import Controller from "./controller";
-import u from "umbrellajs";
-import validator from 'validator';
-import {validate, getGeneralValidationResult} from '../use-cases/validate-column';
-import {filter} from '../use-cases/filter-input';
-import {setValidationResult, getValidationResult} from "../use-cases/quick-validation-pointer";
-import {createColumn} from "../use-cases/create-column";
+// import u from "umbrellajs";
+// import validator from 'validator';
+// import {validate, getGeneralValidationResult} from '../use-cases/validate-column';
+// import {filter} from '../use-cases/filter-input';
+// import {setValidationResult, getValidationResult} from "../use-cases/quick-validation-pointer";
+// import {createColumn} from "../use-cases/create-column";
 
 /**
  * @extends Controller
  */
 class ColumnsController extends Controller {
+    namespace() { return 'NikitosGolubev\\Controllers\\ColumnsController'; }
+
     constructor(model, view) {
         super(model, view);
     }
@@ -74,45 +76,6 @@ class ColumnsController extends Controller {
         return u(elemTriggeredWithEvent).closest('.js-create-column-form').first();
     }
 
-    /**
-     * Returns object only with data which were provided by the user.
-     * @param {HTMLElement} form Place where user passed the data.
-     * @param {boolean} $filterIt Defines if data should be previously filtered or not.
-     * @return {object}
-     */
-    getPassedDataOnly(form, $filterIt = true) {
-        let column, passedData = {};
-
-        if ($filterIt) column = this.getFilteredColumnParams(form);
-        else column = this.getColumnParams(form);
-
-        for (let field in column) {
-            passedData[field] = column[field].content;
-        }
-
-        return passedData;
-    }
-
-    /**
-     * Returns column with filtered user input. For security sakes. Helper.
-     * @private
-     * @param {HTMLElement} form Form, where user input may be fetched.
-     * @return {object}
-     */
-    getFilteredColumnParams(form) {
-        let column = this.getColumnParams(form);
-        for (let field in column) {
-            column[field].content = filter(column[field].content, validator);
-        }
-        return column;
-    }
-
-    /**
-     * Returns data about column, how to validate it, the values that were sent by user, other settings...
-     * @private
-     * @param {HTMLElement} form current form - DOM element
-     * @return {object}
-     */
     getColumnParams(form) {
         const title = u(form).find('.js-column-name-input').first();
 

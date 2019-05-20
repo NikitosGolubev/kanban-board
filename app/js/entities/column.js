@@ -3,17 +3,23 @@
  * @namespace NikitosGolubev\Entities
  */
 
-class Column {
+import Entity from './entity';
+
+/**
+ * @extends Entity
+ */
+class Column extends Entity {
     constructor($id = null) {
+        super();
         this.id = $id;
     }
 
     /**
-     * Creates column.
-     * @param id
-     * @param createdAt
-     * @param updatedAt
-     * @param title Title of the column
+     * Initiates columns structure.
+     * @param {int} id
+     * @param {int|null} createdAt
+     * @param {int|null} updatedAt
+     * @param {string} title Title of the column
      * @return {object}
      */
     init({
@@ -21,7 +27,11 @@ class Column {
          createdAt = Date.now(),
          updatedAt = Date.now(),
          title
-         }) {
+    }) {
+        this.validate('column', {
+            title: title
+        });
+
         return Object.freeze({
             id: () => id,
             createdAt: () => createdAt,

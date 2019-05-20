@@ -10,6 +10,8 @@ import View from '../../view';
  * @abstract
  */
 class ValidationView extends View {
+    namespace() { return 'NikitosGolubev\\Views\\Content\\Validation\\ValidationView'; }
+
     constructor(model) {
         super(model);
     }

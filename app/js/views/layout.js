@@ -10,6 +10,8 @@ import View from './view';
  * @abstract
  */
 class Layout extends View {
+    namespace() { return 'NikitosGolubev\\Views\\Layout'; }
+
     /**
      * There is no place for model
      * @param model is not used

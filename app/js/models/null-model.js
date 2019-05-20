@@ -9,6 +9,8 @@ import Model from './model';
  * @extends Model
  */
 class NullModel extends Model {
+    namespace() { return 'NikitosGolubev\\Models\\NullModel'; }
+
     constructor() {
         super();
     }

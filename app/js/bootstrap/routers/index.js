@@ -6,17 +6,14 @@
 import Router from '../../framework/router';
 import u from "umbrellajs";
 
-// Service providers
-
-
 // Models
 import NullModel from '../../models/null-model';
 import Column from '../../models/content/ls-type/column';
 import Record from "../../models/content/ls-type/record";
 
 // Controllers
-import RecordsController from '../../controllers/records-controller';
-import ColumnsController from '../../controllers/columns-controller';
+import RecordsController from '../../controllers/entities-management/records-controller';
+import ColumnsController from '../../controllers/entities-management/columns-controller';
 
 // Views
 import AddRecordForm from '../../views/content/add-record-form';
@@ -37,6 +34,7 @@ body.addEventListener('click', removeEmptyColumn);
 body.addEventListener('click', createEmptyColumn);
 body.addEventListener('click', createColumn);
 body.addEventListener('click', createRecord);
+
 
 // Event functions
 function showAddRecordForm(event) {

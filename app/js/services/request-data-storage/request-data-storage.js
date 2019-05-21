@@ -3,18 +3,11 @@
  * @namespace NikitosGolubev\Services\RequestDataStorage
  */
 
-import Service from '../service';
-
 /**
  * Provides unified API to store data and info how to handle it.
- * @extends Service
  */
-class RequestDataStorage extends Service {
-    namespace() { return 'NikitosGolubev\\Services\\RequestDataStorage\\RequestDataStorage'; }
-
+class RequestDataStorage {
     constructor() {
-        super();
-
         /**
          * Data container. Contains all the data which were set.
          * @type {object}
@@ -35,6 +28,7 @@ class RequestDataStorage extends Service {
      * @param {null|HTMLElement} target HTMLElement which relates to this data.
      * @param {boolean} required
      * @param visualValidation If data should be validated visually or not (to user).
+     * @param {boolean} modifiable Defines if params content may be modified or not.
      * @param rest Other properties which may be useful to handle this piece of data.
      */
     setParam(paramName, {
@@ -42,6 +36,7 @@ class RequestDataStorage extends Service {
         target = null,
         required = true,
         visualValidation = true,
+        modifiable = true,
         ...rest
     }) {
         this.validateParam(content, target, required);
@@ -50,7 +45,8 @@ class RequestDataStorage extends Service {
             content: content,
             target: target,
             required: required,
-            visualValidation: visualValidation
+            visualValidation: visualValidation,
+            modifiable: modifiable
         });
 
         this.params[paramName] = param;
@@ -84,7 +80,9 @@ class RequestDataStorage extends Service {
         if ($params === null) $params = this.params;
 
         for (let paramName in $params) {
-            $params[paramName].content = modifyAction($params[paramName].content, ...callbackArgs);
+            if ($params[paramName].modifiable) {
+                $params[paramName].content = modifyAction($params[paramName].content, ...callbackArgs);
+            }
         }
 
         return $params;
@@ -101,7 +99,7 @@ class RequestDataStorage extends Service {
         if (
             content === undefined ||
             !((target instanceof HTMLElement) || target === null) ||
-            !(required instanceof Boolean)
+            !(typeof required === "boolean")
         ) {
             const invalidParamMsg = `
                 REQUEST PARAMETER IS INVALID: \n

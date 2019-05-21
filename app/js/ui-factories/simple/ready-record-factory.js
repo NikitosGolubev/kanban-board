@@ -24,8 +24,7 @@ class ReadyRecordFactory extends UiFactory {
         recordContainer.setAttribute('data-record-id', id);
 
         let recordName = document.createElement('span');
-        let recordNameText = document.createTextNode(name);
-        recordName.appendChild(recordNameText);
+        recordName.innerHTML = name;
 
         recordContainer.appendChild(recordName);
 

@@ -22,8 +22,7 @@ class ColumnHeaderFactory extends UiFactory {
         headerContainer.classList.add('js-column__header');
         headerContainer.classList.add('column__header');
 
-        let titleText = document.createTextNode(title);
-        headerContainer.appendChild(titleText);
+        headerContainer.innerHTML += title;
         return headerContainer;
     }
 }

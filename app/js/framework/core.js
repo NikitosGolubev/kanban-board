@@ -7,7 +7,7 @@ import App from './service-providers/app';
 
 /**
  * Provides crucial functionality and performs important operations.
- * MUST be extended by Services, Models, Views, Controllers.
+ * MUST be extended by MODELS, VIEWS, CONTROLLERS.
  */
 class Core {
     /**

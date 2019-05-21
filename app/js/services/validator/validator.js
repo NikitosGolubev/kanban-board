@@ -3,22 +3,17 @@
  * @namespace NikitosGolubev\Services\Validator
  */
 
-import Service from '../service';
 import ValidationResponse from './validation-response';
+import validator from 'validator';
 
 /**
  * Provides API to validate data.
- * @extends Service
  * @abstract
  */
-class Validator extends Service {
-    namespace() { return 'NikitosGolubev\\Services\\Validator\\Validator'; }
-
+class Validator {
     constructor() {
-        super();
-
         /** Package which will perform some validation operations */
-        this.validator = this.services.validator;
+        this.validator = validator;
 
         /** For building response, report about validation result */
         this.response = new ValidationResponse();

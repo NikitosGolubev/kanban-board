@@ -1,11 +1,26 @@
 /**
+ * @fileOverview Dependency manager.
+ * WARNING: IT's FORBIDDEN TO IMPORT ANY VIEWS, MODELS OR CONTROLLERS HERE.
+ * OTHERWISE CIRCULAR DEPENDENCY WOULD OCCUR AND THE WHOLE APPLICATION WILL BREAK (stop functioning).
+ * SAME RULE OF IMPORTING APPLIES ON SERVICE PROVIDERS.
  * @namespace NikitosGolubev\Framework\ServiceProviders
  */
 
-import FormValidationDependencies from './concrete/form-validation-service-provider';
+// Packages
+import DomManipulationLibrary from 'umbrellajs';
+
+// Services
+import ValidateColumn from "../../services/validator/concrete/validate-column";
+import ValidateRecord from "../../services/validator/concrete/validate-record";
+
+// Service providers
+import EntityManagementDependencies from './concrete/entity-service-provider';
 
 /**
  * Main dependency manager.
+ * WARNING: IT's FORBIDDEN TO IMPORT ANY VIEWS, MODELS OR CONTROLLERS HERE.
+ * OTHERWISE CIRCULAR DEPENDENCY WOULD OCCUR AND THE WHOLE APPLICATION WILL BREAK (stop functioning).
+ * SAME RULE OF IMPORTING APPLIES ON SERVICE PROVIDERS.
  */
 class App {
     /**
@@ -14,7 +29,16 @@ class App {
      */
     getDependencies() {
         return {
-            "NikitosGolubev\\Controllers\\ColumnsController": FormValidationDependencies
+            'NikitosGolubev\\Controllers\\EntitiesManagement\\ColumnsController': {
+                dom: DomManipulationLibrary,
+                validator: new ValidateColumn(),
+                ...EntityManagementDependencies
+            },
+            'NikitosGolubev\\Controllers\\EntitiesManagement\\RecordsController': {
+                dom: DomManipulationLibrary,
+                validator: new ValidateRecord(),
+                ...EntityManagementDependencies
+            }
         };
     }
 }

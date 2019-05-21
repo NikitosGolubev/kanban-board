@@ -3,19 +3,12 @@
  * @namespace NikitosGolubev\Services\Mutator
  */
 
-import Service from '../service';
-
 /**
  * Interface which provides API to change data differently.
- * @extends Service
  * @abstract
  */
-class Mutator extends Service {
-    namespace() { return 'NikitosGolubev\\Services\\Mutator\\Mutator'; }
-
-    constructor() {
-        super();
-    }
+class Mutator {
+    constructor() {}
 
     /**
      * Changes given data somehow.

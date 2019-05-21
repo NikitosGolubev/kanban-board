@@ -3,19 +3,12 @@
  * @namespace NikitosGolubev\Services\ValidationPointer
  */
 
-import Service from '../service';
-
 /**
  * Provides simple API to quickly save and fetch validation results.
  * @abstract
- * @extends Service
  */
-class ValidationPointer extends Service {
-    namespace() {return "NikitosGolubev\\Services\\ValidationPointer\\ValidationPointer";}
-
-    constructor() {
-        super();
-    }
+class ValidationPointer {
+    constructor() {}
 
     /**
      * Stores validation result somehow.

@@ -9,8 +9,6 @@ import Validator from '../validator';
  * @extends Validator
  */
 class ValidateRecord extends Validator {
-    namespace() { return 'NikitosGolubev\\Services\\Validator\\Concrete\\ValidateRecord' }
-
     constructor() {
         super();
 

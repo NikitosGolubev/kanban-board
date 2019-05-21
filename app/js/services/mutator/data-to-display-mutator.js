@@ -4,6 +4,7 @@
  */
 
 import Mutator from './mutator';
+import validator from 'validator';
 
 /**
  * Mutates data which is gonna be displayed on the screen.
@@ -11,11 +12,9 @@ import Mutator from './mutator';
  * @extends Mutator
  */
 class DataToDisplayMutator extends Mutator {
-    namespace() { return 'NikitosGolubev\\Services\\Mutator\\DataToDisplayMutator' }
-
     constructor() {
         super();
-        this.validator = this.services.validator;
+        this.validator = validator;
     }
 
     /**

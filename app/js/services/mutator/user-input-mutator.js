@@ -4,17 +4,16 @@
  */
 
 import Mutator from './mutator';
+import validator from 'validator';
 
 /**
  * Mutates data which user passed to avoid unpleasant issues.
  * @extends Mutator
  */
 class UserInputMutator extends Mutator{
-    namespace() { return 'NikitosGolubev\\Services\\Mutator\\UserInputMutator' }
-
     constructor() {
         super();
-        this.validator = this.services.validator;
+        this.validator = validator;
     }
 
     /**
@@ -37,8 +36,8 @@ class UserInputMutator extends Mutator{
      * @return {string}
      */
     trim(str) {
-        str = str.replace(/\n\n+/g, "\n");
-        str.replace(/\s\s+/g, " ");
+        str = str = str.replace(/\n\n+/g, "\n");
+        str = str.replace(/\s\s+/g, " ");
         return str;
     }
 }

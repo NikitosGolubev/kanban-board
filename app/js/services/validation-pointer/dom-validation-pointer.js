@@ -10,8 +10,6 @@ import ValidationPointer from './validation-pointer';
  * @extends ValidationPointer
  */
 class DomValidationPointer extends ValidationPointer {
-    namespace() {return "NikitosGolubev\\Services\\ValidationPointer\\DomValidationPointer";}
-
     constructor() {
         super();
 

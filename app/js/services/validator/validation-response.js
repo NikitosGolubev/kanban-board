@@ -3,18 +3,11 @@
  * @namespace NikitosGolubev\Services\Validator
  */
 
-import Service from '../service';
-
 /**
  * Common validation response
- * @extends Service
  */
-class ValidationResponse extends Service {
-    namespace() { return 'NikitosGolubev\\Services\\Validator\\ValidationResponse'; }
-
+class ValidationResponse {
     constructor() {
-        super();
-
         this.defaultValidationMessages = this.getDefaultValidationMessages();
     }
 

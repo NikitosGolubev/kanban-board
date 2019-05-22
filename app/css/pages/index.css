@@ -65,6 +65,7 @@
   -webkit-border-radius: 3px;
           border-radius: 3px;
   padding: 1.7vmin;
+  word-wrap: break-word;
   font-family: "Montserrat Bold";
   top: 0; }
 
@@ -94,7 +95,7 @@
     background: #39C071;
     color: #fff; }
   .record__content {
-    word-break: break-word; }
+    word-wrap: break-word; }
 
 /* Add record panel */
 .add-btn {

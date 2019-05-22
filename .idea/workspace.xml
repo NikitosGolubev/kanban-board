@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbee861d-1471-4dfd-acca-b5586725a129" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/css/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/pages/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/build/routers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/build/routers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/js/build/ui-adjusters/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/build/ui-adjusters/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/controllers/entities-management/records-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/controllers/entities-management/records-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/models/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/models/model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/services/validator/concrete/validate-record.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/services/validator/concrete/validate-record.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/ui-factories/simple/ready-record-factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/ui-factories/simple/ready-record-factory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/sass/pages/index.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/pages/index.sass" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,8 +34,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/js/services/mutator/storage-output-mutator.js" />
-        <option value="$PROJECT_DIR$/app/js/use-cases/create/Create.js" />
         <option value="$PROJECT_DIR$/app/js/use-cases/create/create.js" />
         <option value="$PROJECT_DIR$/app/js/use-cases/create-column.js" />
         <option value="$PROJECT_DIR$/app/js/use-cases/create/create-column.js" />
@@ -74,7 +73,6 @@
         <option value="$PROJECT_DIR$/app/js/framework/service-providers/concrete/entity-service-provider.js" />
         <option value="$PROJECT_DIR$/app/js/bootstrap/routers/index.js" />
         <option value="$PROJECT_DIR$/app/js/services/mutator/user-input-mutator.js" />
-        <option value="$PROJECT_DIR$/app/js/ui-factories/simple/ready-record-factory.js" />
         <option value="$PROJECT_DIR$/app/js/ui-factories/simple/column-header-factory.js" />
         <option value="$PROJECT_DIR$/app/js/framework/service-providers/app.js" />
         <option value="$PROJECT_DIR$/app/js/services/request-data-storage/request-data-storage.js" />
@@ -84,6 +82,9 @@
         <option value="$PROJECT_DIR$/app/js/models/model.js" />
         <option value="$PROJECT_DIR$/app/js/services/validator/concrete/validate-record.js" />
         <option value="$PROJECT_DIR$/app/js/controllers/entities-management/records-controller.js" />
+        <option value="$PROJECT_DIR$/app/js/ui-factories/simple/ready-record-factory.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/sass/pages/index.sass" />
       </list>
     </option>
   </component>
@@ -97,7 +98,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
@@ -469,6 +470,21 @@
               <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ui-factories" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ui-factories" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="simple" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
@@ -487,6 +503,19 @@
               <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="validation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sass" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sass" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="pages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -579,12 +608,12 @@
       <workItem from="1558544519940" duration="6019000" />
       <workItem from="1558561033412" duration="114000" />
       <workItem from="1558561162015" duration="110000" />
-      <workItem from="1558561279393" duration="4503000" />
+      <workItem from="1558561279393" duration="5275000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253359000" />
+    <option name="totallyTimeSpent" value="254131000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -648,13 +677,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/js/views/layout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/views/layouts/remove-element.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -919,13 +941,6 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/services/request-data-storage/request-data-storage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -964,13 +979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/ui-factories/simple/ready-record-factory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/models/null-model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
@@ -1001,11 +1009,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/controllers/entities-management/records-controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1175">
+        <state relative-caret-position="275">
           <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
           <folding>
             <element signature="e#120#171#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sass/pages/index.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/ui-factories/simple/ready-record-factory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="60" column="74" selection-start-line="60" selection-start-column="74" selection-end-line="60" selection-end-column="74" />
         </state>
       </provider>
     </entry>

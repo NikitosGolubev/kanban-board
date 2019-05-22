@@ -3,8 +3,10 @@
  * @namespace NikitosGolubev\Controllers\EntitiesManagement
  */
 
+
 import EntityController from "./entity-controller";
 import CreateRecord from "../../use-cases/create/create-record";
+import Column from "../../models/content/ls-type/column";
 
 /**
  * @extends EntityController
@@ -42,7 +44,8 @@ class RecordsController extends EntityController {
         this.request.setParam('columnId', {
             content: columnId,
             visualValidation: false,
-            modifiable: false
+            modifiable: false,
+            db: new Column()
         });
     }
 

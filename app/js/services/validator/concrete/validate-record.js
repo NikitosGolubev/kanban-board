@@ -59,7 +59,7 @@ class ValidateRecord extends Validator {
      * @return {object}
      */
     validateColumnId(columnIdData) {
-        let {content, required=true} = columnIdData;
+        let {content, required=true, db} = columnIdData;
         let failMessage = "Valid ID is automatically provided in columns attribute, don't change it!";
 
         const emptinessCheck = this.emptinessWithNecessityCheck(content, required, columnIdData, {
@@ -68,6 +68,11 @@ class ValidateRecord extends Validator {
         if (emptinessCheck) return emptinessCheck;
 
         if (!this.validator.isInt(content, {allow_leading_zeroes: false})) {
+            return this.response.fail(failMessage, columnIdData);
+        }
+
+        // If column with such ID really exists
+        if (!db.exists(true, (model, {id}) => (+id) === (+content))) {
             return this.response.fail(failMessage, columnIdData);
         }
 

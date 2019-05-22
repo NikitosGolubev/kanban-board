@@ -64,6 +64,47 @@ class Model extends Subject {
     }
 
     /**
+     * Searches for particular element(-s) in storage.
+     * @param {array|boolean} $items Items through which search should be performed, if set to true
+     *     then, searches through current selection.
+     * @param {function} $searchAction Callback which accepts two parameters:
+     *     1) - model which processes this method (self).
+     *     2) - single selected record
+     *     MUST return boolean type.
+     * @param {boolean} $browseAll Defines if all the matches should be returned, or only first one.
+     *     All records are browsed by default (true).
+     * @return {array} Returns array with results or an empty array (if nothing found).
+     */
+    where($items = true, $searchAction = () => true, $browseAll = true) {
+        if ($items === true) $items = this.get();
+        let result = [];
+
+        for (let i = 0; i < $items.length; i++) {
+            if ($searchAction(this, $items[i])) {
+                result.push($items[i]);
+                if (!$browseAll) break;
+            }
+        }
+
+        return result;
+    }
+
+    /**
+     * Defines if some item exists or not.
+     * @param {array|boolean} $items Items through which search should be performed, if set to true
+     *     then, searches through current selection.
+     * @param {function} $searchAction Callback which accepts two parameters:
+     *     1) - model which processes this method (self).
+     *     2) - single selected record
+     *     MUST return boolean type.
+     * @return {boolean}
+     */
+    exists($items = true, $searchAction = () => true) {
+        let selection = this.where($items, $searchAction, false);
+        return !!selection.length;
+    }
+
+    /**
      * Defines set of methods to access & generate ID (primary key).
      * @return {object}
      */

@@ -17,6 +17,12 @@ class ColumnsController extends EntityController {
 
         this.formSelector = '.js-create-column-form';
         this.creator = new CreateColumn(model);
+
+        /**
+         * Represents the form which is used for engaging with entity.
+         * @type {HTMLElement}
+         */
+        this.initialForm = this.services.initialFormFactory.get();
     }
 
     /**
@@ -53,6 +59,7 @@ class ColumnsController extends EntityController {
         this.storeLogic(data, (createdColumn, form) => {
             let columnElement = this.dom(form).closest('.js-column_wrap').first();
             this.printView({columnData: createdColumn, columnElement: columnElement});
+            this.resetForm(form, this.initialForm);
         }, form);
     }
 }

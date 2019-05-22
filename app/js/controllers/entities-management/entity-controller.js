@@ -66,6 +66,7 @@ class EntityController extends Controller {
         let validationResult = this.validator.getGeneralValidationResult(validationResponse);
 
         this.validationPointer.setValidationResult(validationResult, form);
+
         this.model.notify({responses: validationResponse});
     }
 
@@ -87,7 +88,7 @@ class EntityController extends Controller {
             let createdEntity = this.creator.create(entityData);
             this.prepareForDisplay(createdEntity);
 
-            $uniqueAction(createdEntity, rest);
+            $uniqueAction(createdEntity, ...rest);
         }
     }
 
@@ -120,6 +121,18 @@ class EntityController extends Controller {
      */
     getForm(formInnerElement, formSelector) {
         return this.dom(formInnerElement).closest(formSelector).first();
+    }
+
+    /**
+     * Empties form element, removes all the messages and data which were left.
+     * @param {HTMLElement} form HTMLElement which needs reset. (not necessary <form></form>)
+     * @param {HTMLElement} initialForm Represents the form which is used for engaging with entity.
+     * Other words - empty clone of 'form'.
+     */
+    resetForm(form, initialForm) {
+        let formContainer = form.parentNode;
+        formContainer.insertBefore(initialForm, form); // Pasting empty form without data
+        formContainer.removeChild(form); // Removing old form which needed reset.
     }
 
     /**

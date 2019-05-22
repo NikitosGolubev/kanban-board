@@ -17,6 +17,12 @@ class RecordsController extends EntityController {
 
         this.formSelector = '.js-create-record-form';
         this.creator = new CreateRecord(model);
+
+        /**
+         * Represents the form which is used for engaging with entity.
+         * @type {HTMLElement}
+         */
+        this.initialForm = this.services.initialFormFactory.get();
     }
 
     /**
@@ -60,6 +66,7 @@ class RecordsController extends EntityController {
         this.storeLogic(data, (createdRecord, form) => {
             let columnElement = this.dom(form).closest('.js-column_wrap').first();
             this.printView({recordData: createdRecord, columnElement: columnElement});
+            this.resetForm(form, this.initialForm);
         }, form);
     }
 }

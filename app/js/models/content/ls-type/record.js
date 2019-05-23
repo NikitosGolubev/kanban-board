@@ -15,6 +15,15 @@ class Record extends LocalStorage {
     constructor() {
         super();
     }
+
+    /**
+     * Returns column to which record belongs to.
+     * @param {object} record Record which column should be identified.
+     * @return {Array}
+     */
+    getColumn(record) {
+        return this.hasOne(record, 'columns');
+    }
 }
 
 export default Record;

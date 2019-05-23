@@ -60,11 +60,13 @@ class LocalStorage extends Model {
 
     /**
      * @see Model.get()
+     * @param {null|string} $storage
      * @return {array}
      */
-    get() {
+    get($storage = null) {
+        if ($storage === null) $storage = this.storage;
         const db = this.getDB(); // getting database
-        return db[this.storage]; // retrieving the whole table
+        return db[$storage]; // retrieving the whole table
     }
 
     /* ---------------------------------- */

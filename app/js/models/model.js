@@ -56,9 +56,11 @@ class Model extends Subject {
     /**
      * Gets all the data from some storage.
      * @abstract
+     * @param {null|string} $storage Storage which data should be selected.
+     *    By default = null, that means, that current storage name is gonna be used.
      * @return {array} Array with objects which represent records
      */
-    get() {
+    get($storage = null) {
         console.error("It's an abstract method which requires implementation!");
         throw "It's an abstract method which requires implementation!";
     }
@@ -102,6 +104,34 @@ class Model extends Subject {
     exists($items = true, $searchAction = () => true) {
         let selection = this.where($items, $searchAction, false);
         return !!selection.length;
+    }
+
+    /**
+     * Returns the record which belongs to another record (relative).
+     * One to one relationship.
+     * @param {object} item Item whose relative should be found.
+     * @param {string} relativesStorageName Storage where relative may be found
+     * @param {null|string} $selfParamToCompare Items param which should act in comparison to identify relative.
+     * Null by default, it means that relativesStorageName would be cut to single form and supplemented with 'Id'
+     * word to form param. Example: of storage name is 'columns', then param is gonna be equal to 'columnsId'
+     * @param {string} $relativeParamToCompare Relatives param which should act in comparison to identify self.
+     * Default value is: 'id'
+     * @return {Array}
+     */
+    hasOne(item, relativesStorageName, $selfParamToCompare = null, $relativeParamToCompare = 'id') {
+        if ($selfParamToCompare === null) {
+            // Cutting (-s) from the end of provided storage name
+            let singleRecordName = relativesStorageName.substr(0, (relativesStorageName.length - 1));
+            $selfParamToCompare = singleRecordName+"Id";
+        }
+
+        let relativesStorageData = this.get(relativesStorageName);
+
+        let relative = this.where(relativesStorageData, (model, record) => {
+            return item[$selfParamToCompare] === record[$relativeParamToCompare];
+        }, false);
+
+        return relative;
     }
 
     /**

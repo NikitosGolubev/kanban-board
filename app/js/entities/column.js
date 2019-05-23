@@ -33,7 +33,7 @@ class Column extends Entity {
         });
 
         return Object.freeze({
-            id: () => id,
+            id: () => +id,
             createdAt: () => createdAt,
             updatedAt: ()  => updatedAt,
             title: () => title

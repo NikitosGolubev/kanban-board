@@ -36,6 +36,21 @@ body.addEventListener('click', createColumn);
 body.addEventListener('click', createRecord);
 
 
+window.addEventListener('load', (event) => {
+    let record = new Record();
+    let records = record.get();
+    for (let i = 0; i < records.length; i++) {
+        let column = record.getColumn(records[i]);
+        if (column.length) {
+            console.log(`Look at the record below:`);
+            console.table(records[i]);
+            console.log(`And you can see it's column now!`);
+            console.table(column);
+            break;
+        }
+    }
+});
+
 // Event functions
 function showAddRecordForm(event) {
     let elemTriggered = u(event.target).closest('.js-show-add-record-form').first();

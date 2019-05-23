@@ -36,11 +36,11 @@ class Record extends Entity {
         });
 
         return Object.freeze({
-            id: () => id,
+            id: () => +id,
             createdAt: () => createdAt,
             updatedAt: ()  => updatedAt,
             name: () => name,
-            columnId: () => columnId
+            columnId: () => +columnId
         });
     }
 }

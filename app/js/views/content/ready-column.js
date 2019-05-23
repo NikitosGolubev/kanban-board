@@ -4,7 +4,9 @@
  */
 
 import View from '../view';
-import ReadyColumnFactory from "../../ui-factories/simple/ready-column-factory";
+import DraggableRecordsInColumn from "../layouts/draggable-records-in-column";
+import ScrollableColumn from "../layouts/scrollable-column";
+import StickyElementsInColumn from "../layouts/sticky-elements-in-column";
 
 /**
  * @implements View, Observer
@@ -14,6 +16,8 @@ class ReadyColumn extends View {
 
     constructor(model) {
         super(model);
+        this.columnFactory = this.services.columnFactory;
+        this.dom = this.services.dom;
     }
 
     /**
@@ -28,11 +32,27 @@ class ReadyColumn extends View {
     main({columnData, columnElement: emptyColumn} = false) {
         let columnsContainer = emptyColumn.parentNode;
 
-        let readyColumnFactory = new ReadyColumnFactory({title: columnData.title, id: columnData.id});
-        let readyColumn = readyColumnFactory.get();
+        let readyColumn = this.columnFactory({
+            title: columnData.title,
+            id: columnData.id
+        }).get();
 
+        this.applyModifications(readyColumn);
+
+        // Replacing empty column with new, concrete, created one.
         columnsContainer.insertBefore(readyColumn, emptyColumn);
+
         columnsContainer.removeChild(emptyColumn);
+    }
+
+    applyModifications(column) {
+        let druggableRecords = new DraggableRecordsInColumn();
+        let scrollableColumn = new ScrollableColumn();
+        let stickyElements = new StickyElementsInColumn();
+
+        druggableRecords.main({column: column});
+        scrollableColumn.main({column: column});
+        stickyElements.main({column: column});
     }
 }
 

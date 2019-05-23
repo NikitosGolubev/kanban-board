@@ -22,7 +22,7 @@ class ColumnsController extends EntityController {
          * Represents the form which is used for engaging with entity.
          * @type {HTMLElement}
          */
-        this.initialForm = this.services.initialFormFactory.get();
+        this.initialForm = this.services.initialFormFactory().get();
     }
 
     /**

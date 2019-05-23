@@ -102,7 +102,20 @@ function loadJS() {
 // Load fonts to dist folder
 function loadFonts() {
 	return gulp.src(paths.fonts.src)
-	.pipe(gulp.dest(paths.fonts.dest));
+		.pipe(gulp.dest(paths.fonts.dest));
+}
+
+// Loads HTML files
+function loadHTML() {
+	return gulp.src(paths.html.src)
+		.pipe(minifyHTML({ collapseWhitespace: true }))
+		.pipe(gulp.dest(paths.html.dest));
+}
+
+// Loads favicon
+function loadFavicon() {
+	return gulp.src('app/favicon.ico')
+		.pipe(gulp.dest('dist'));
 }
 
 // Load images to dist folder and handle them
@@ -162,6 +175,8 @@ exports.server = server;
 exports.removeDist = removeDist;
 exports.clearCache = clearCache;
 exports.compileSASS = compileSASS;
+exports.loadHTML = loadHTML;
+exports.loadFavicon = loadFavicon;
 exports.loadCSS = loadCSS;
 exports.loadSASS = loadSASS;
 exports.loadJS = loadJS;
@@ -175,7 +190,9 @@ exports.watch = watch;
 // General tasks which runs some other task and perform some result
 
 // Load everyrhing to dist folder
-let loadTask = gulp.parallel( 
+let loadTask = gulp.parallel(
+	loadHTML,
+	loadFavicon,
 	loadCSS,
 	loadSASS,
 	loadJS,

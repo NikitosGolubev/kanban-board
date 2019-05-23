@@ -5,12 +5,6 @@
 
 import View from '../view';
 
-/* Layouts */
-import RemoveElement from '../layouts/remove-element';
-
-/* UI factories */
-import AddRecordFormFactory from '../../ui-factories/simple/add-record-form-factory';
-
 /**
  * @implements View, Observer
  */
@@ -19,6 +13,7 @@ class AddRecordForm extends View {
 
     constructor(model) {
         super(model);
+        this.formFactory = this.services.formFactory;
     }
 
     /**
@@ -34,11 +29,11 @@ class AddRecordForm extends View {
     main($data = false) {
         let controlsContainer = $data.createElem.parentNode;
 
-        this.removeElement($data.createElem);
-
         let form = this.createAddRecordForm();
 
-        controlsContainer.appendChild(form);
+        controlsContainer.insertBefore(form, $data.createElem);
+
+        this.removeElement($data.createElem);
     }
 
     /**
@@ -46,8 +41,7 @@ class AddRecordForm extends View {
      * @return {Object} DOM
      */
     createAddRecordForm() {
-        let formFactory = new AddRecordFormFactory;
-        return formFactory.get();
+        return this.formFactory().get();
     }
 
     /**
@@ -55,8 +49,7 @@ class AddRecordForm extends View {
      * @param {object} elementToRemove DOM
      */
     removeElement(elementToRemove) {
-        let removeElementLayout = new RemoveElement();
-        removeElementLayout.main({element: elementToRemove});
+        elementToRemove.parentNode.removeChild(elementToRemove);
     }
 }
 

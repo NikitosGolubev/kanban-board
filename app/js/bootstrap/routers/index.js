@@ -18,7 +18,7 @@ import ColumnsController from '../../controllers/entities-management/columns-con
 // Views
 import AddRecordForm from '../../views/content/add-record-form';
 import RemoveAddRecordForm from '../../views/content/remove-add-record-form';
-import RemoveElement from "../../views/layouts/remove-element";
+import RemoveElement from "../../views/content/remove-element";
 import EmptyColumn from '../../views/content/empty-column';
 import ReadyColumn from '../../views/content/ready-column';
 import ReadyRecord from '../../views/content/ready-record';

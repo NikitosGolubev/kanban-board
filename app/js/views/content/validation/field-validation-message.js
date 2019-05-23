@@ -4,8 +4,6 @@
  */
 
 import ValidationView from './validation-view';
-import u from 'umbrellajs';
-import FieldMessageFactory from "../../../ui-factories/simple/field-message-factory";
 
 /**
  * @extends ValidationView
@@ -15,7 +13,8 @@ class FieldValidationMessage extends ValidationView {
 
     constructor(model) {
         super(model);
-        this.messageFactory = new FieldMessageFactory();
+        this.dom = this.services.dom;
+        this.messageFactory = this.services.messageFactory;
 
         this.msgAttr = 'data-message-exists';
         this.msgExistsValue = "1";
@@ -35,10 +34,10 @@ class FieldValidationMessage extends ValidationView {
         let messageContainer = this.initMessage(target, message);
 
         // Unique part start
-        u(target).removeClass(this.fieldFailClassNames);
-        u(messageContainer).removeClass(this.messageFailClassNames);
-        u(target).addClass(this.fieldSuccessClassNames);
-        u(messageContainer).addClass(this.messageSuccessClassNames);
+        this.dom(target).removeClass(this.fieldFailClassNames);
+        this.dom(messageContainer).removeClass(this.messageFailClassNames);
+        this.dom(target).addClass(this.fieldSuccessClassNames);
+        this.dom(messageContainer).addClass(this.messageSuccessClassNames);
         // Unique part end
 
         this.storeMessage(target, messageContainer);
@@ -53,10 +52,10 @@ class FieldValidationMessage extends ValidationView {
         let messageContainer = this.initMessage(target, message);
 
         // Unique part
-        u(target).removeClass(this.fieldSuccessClassNames);
-        u(messageContainer).removeClass(this.messageSuccessClassNames);
-        u(target).addClass(this.fieldFailClassNames);
-        u(messageContainer).addClass(this.messageFailClassNames);
+        this.dom(target).removeClass(this.fieldSuccessClassNames);
+        this.dom(messageContainer).removeClass(this.messageSuccessClassNames);
+        this.dom(target).addClass(this.fieldFailClassNames);
+        this.dom(messageContainer).addClass(this.messageFailClassNames);
         // Unique part end
 
         this.storeMessage(target, messageContainer);
@@ -102,7 +101,7 @@ class FieldValidationMessage extends ValidationView {
      * @return {Object}
      */
     createMessageContainer() {
-        return this.messageFactory.get();
+        return this.messageFactory().get();
     }
 
     /**
@@ -111,7 +110,7 @@ class FieldValidationMessage extends ValidationView {
      * @return {HTMLElement}
      */
     findExistingMessageContainer(target) {
-        return u(target).siblings().filter('.js-validation-message').first();
+        return this.dom(target).siblings().filter('.js-validation-message').first();
     }
 
     /**
@@ -130,7 +129,7 @@ class FieldValidationMessage extends ValidationView {
      */
     insertMessageContainer(messageContainer, target) {
         if (!this.isMessageExists(target)) {
-            u(target).after(messageContainer);
+            this.dom(target).after(messageContainer);
         }
     }
 
@@ -148,7 +147,7 @@ class FieldValidationMessage extends ValidationView {
      * @param {string} message
      */
     setMessage(messageContainer, message) {
-        this.messageFactory.setMessage(messageContainer, message);
+        this.messageFactory().setMessage(messageContainer, message);
     }
 }
 

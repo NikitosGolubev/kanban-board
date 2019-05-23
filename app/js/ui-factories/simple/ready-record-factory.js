@@ -1,5 +1,5 @@
 /**
- * @fileOverview
+ * @fileOverview Creates ready to be displayed record.
  * @namespace NikitosGolubev\UiFactories\Simple
  */
 
@@ -15,7 +15,9 @@ class ReadyRecordFactory extends UiFactory {
 
     /**
      * @see UiFactory.build()
-     * @param {{id: int, title: string}}
+     * @param {Number} id Record ID
+     * @param {string} name Record name (it's inner content)
+     * @return {HTMLElement}
      */
     build({id, name}) {
         let recordContainer = document.createElement('div');
@@ -23,11 +25,11 @@ class ReadyRecordFactory extends UiFactory {
         recordContainer.classList.add('js-record');
         recordContainer.setAttribute('data-record-id', id);
 
-        let recordName = document.createElement('span');
-        recordName.classList.add('record__content');
-        recordName.innerHTML = name;
+        let recordContent = document.createElement('span');
+        recordContent.classList.add('record__content');
+        recordContent.innerHTML = name;
 
-        recordContainer.appendChild(recordName);
+        recordContainer.appendChild(recordContent);
 
         return recordContainer;
     }

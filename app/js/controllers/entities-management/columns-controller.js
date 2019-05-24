@@ -58,7 +58,7 @@ class ColumnsController extends EntityController {
 
         this.storeLogic(data, (createdColumn, form) => {
             let columnElement = this.dom(form).closest('.js-column_wrap').first();
-            this.printView({columnData: createdColumn, columnElement: columnElement});
+            this.printView({columnData: createdColumn, emptyColumn: columnElement});
             this.resetForm(form, this.initialForm);
         }, form);
     }

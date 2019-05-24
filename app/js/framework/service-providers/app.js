@@ -76,6 +76,9 @@ class App {
                 dom: DomManipulationLibrary,
                 messageFactory: (messageData) => new FieldMessageFactory(messageData)
             },
+            'NikitosGolubev\\Views\\Content\\DisplayColumnsWithRecords': {
+                dom: DomManipulationLibrary
+            },
             // Layouts
             'NikitosGolubev\\Views\\Layouts\\StickyElementsInColumn': {
                 dom: DomManipulationLibrary,

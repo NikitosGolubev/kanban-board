@@ -15,6 +15,15 @@ class Column extends LocalStorage {
     constructor() {
         super();
     }
+
+    /**
+     * Returns records which column contains.
+     * @param {object} column Column which records should be retrieved.
+     * @return {Array}
+     */
+    getRecords(column) {
+        return this.hasMany(column, 'records', 'id', 'columnId');
+    }
 }
 
 export default Column;

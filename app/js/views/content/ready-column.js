@@ -27,22 +27,33 @@ class ReadyColumn extends View {
 
     /**
      * @see View.main()
-     * @param {{columnData: object, columnElement: HTMLElement}}
+     * @param {object} columnData Data to display column
+     * @param {HTMLElement|boolean} emptyColumn Empty column for creating existing one, if
+     * given, should be replaced with fresh created column. By default equals to 'false', which
+     * means that column is gonna be displayed at the end of columns container.
      */
-    main({columnData, columnElement: emptyColumn} = false) {
-        let columnsContainer = emptyColumn.parentNode;
+    main({columnData, emptyColumn = false} = false) {
+        let serviceColumn = document.querySelector('.js-last-service-column');
 
+        let columnsContainer = serviceColumn.parentNode;
+
+        // Creating new column
         let readyColumn = this.columnFactory({
             title: columnData.title,
             id: columnData.id
         }).get();
 
+        // Applying  modifications to model making it more functional.
         this.applyModifications(readyColumn);
 
-        // Replacing empty column with new, concrete, created one.
-        columnsContainer.insertBefore(readyColumn, emptyColumn);
-
-        columnsContainer.removeChild(emptyColumn);
+        // Adding new column before empty column, if it exists,
+        // otherwise paste it in the end of columns container.
+        if (emptyColumn !== false) {
+            columnsContainer.insertBefore(readyColumn, emptyColumn);
+            emptyColumn.parentNode.removeChild(emptyColumn);
+        } else {
+            columnsContainer.insertBefore(readyColumn, serviceColumn);
+        }
     }
 
     applyModifications(column) {

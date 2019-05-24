@@ -107,15 +107,14 @@ class Model extends Subject {
     }
 
     /**
-     * Returns the record which belongs to another record (relative).
      * One to one relationship.
-     * @param {object} item Item whose relative should be found.
-     * @param {string} relativesStorageName Storage where relative may be found
+     * @see this.has()
+     * @param {object} item
+     * @param {string} relativesStorageName
      * @param {null|string} $selfParamToCompare Items param which should act in comparison to identify relative.
      * Null by default, it means that relativesStorageName would be cut to single form and supplemented with 'Id'
-     * word to form param. Example: of storage name is 'columns', then param is gonna be equal to 'columnsId'
-     * @param {string} $relativeParamToCompare Relatives param which should act in comparison to identify self.
-     * Default value is: 'id'
+     * word to form param. Example: of storage name is 'columns', then param is gonna be equal to 'columnId'
+     * @param {string} $relativeParamToCompare 'id' by default
      * @return {Array}
      */
     hasOne(item, relativesStorageName, $selfParamToCompare = null, $relativeParamToCompare = 'id') {
@@ -125,13 +124,47 @@ class Model extends Subject {
             $selfParamToCompare = singleRecordName+"Id";
         }
 
+        return this.has(item, relativesStorageName, $selfParamToCompare, $relativeParamToCompare, false);
+    }
+
+    /**
+     * One to many relationship.
+     * @see this.has()
+     * @param {object} item
+     * @param {string} relativesStorageName
+     * @param {string} $selfParamToCompare 'id' by default
+     * @param {null|string} $relativeParamToCompare Null by default, it means that relativesStorageName would be
+     * cut to single form and supplemented with 'Id' word to form param.
+     * Example: storage name is 'columns', then param is gonna be equal to 'columnId'
+     * @return {Array}
+     */
+    hasMany(item, relativesStorageName, $selfParamToCompare = 'id', $relativeParamToCompare = null) {
+        if ($relativeParamToCompare === null) {
+            // Cutting (-s) from the end of provided storage name
+            let singleRecordName = relativesStorageName.substr(0, (relativesStorageName.length - 1));
+            $relativeParamToCompare = singleRecordName+"Id";
+        }
+
+        return this.has(item, relativesStorageName, $selfParamToCompare, $relativeParamToCompare, true);
+    }
+
+    /**
+     * Helps to identify one to one, one to many relationships between records.
+     * @param {object} item Item whose relative(-s) should be found.
+     * @param {string} relativesStorageName Storage where relative(-s) may be found
+     * @param {string} selfParamToCompare Items param which should act in comparison to identify relative(-s).
+     * @param {string} relativeParamToCompare Relatives param which should act in comparison to identify self.
+     * @param {boolean} browseAll Defines if all relatives should be found (true) or only one of them (false).
+     * @return {Array}
+     */
+    has(item, relativesStorageName, selfParamToCompare, relativeParamToCompare, browseAll = true) {
         let relativesStorageData = this.get(relativesStorageName);
 
-        let relative = this.where(relativesStorageData, (model, record) => {
-            return item[$selfParamToCompare] === record[$relativeParamToCompare];
-        }, false);
+        let relatives = this.where(relativesStorageData, (model, record) => {
+            return item[selfParamToCompare] === record[relativeParamToCompare];
+        }, browseAll);
 
-        return relative;
+        return relatives;
     }
 
     /**

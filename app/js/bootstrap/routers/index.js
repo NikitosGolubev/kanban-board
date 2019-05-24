@@ -14,8 +14,10 @@ import Record from "../../models/content/ls-type/record";
 // Controllers
 import RecordsController from '../../controllers/entities-management/records-controller';
 import ColumnsController from '../../controllers/entities-management/columns-controller';
+import IndexController from "../../controllers/index-controller";
 
 // Views
+import NullView from "../../views/null-view";
 import AddRecordForm from '../../views/content/add-record-form';
 import RemoveAddRecordForm from '../../views/content/remove-add-record-form';
 import RemoveElement from "../../views/content/remove-element";
@@ -23,11 +25,15 @@ import EmptyColumn from '../../views/content/empty-column';
 import ReadyColumn from '../../views/content/ready-column';
 import ReadyRecord from '../../views/content/ready-record';
 import FieldValidationMessage from '../../views/content/validation/field-validation-message';
+import DisplayColumnsWithRecords from "../../views/content/display-columns-with-records";
 
 // DOM elements
 let body = document.querySelector('.js-page-body');
 
 // Attaching events
+window.addEventListener('load', displayColumnsAndRecords);
+window.addEventListener('resize', makeColumnsResponsive);
+
 body.addEventListener('click', showAddRecordForm);
 body.addEventListener('click', hideAddRecordForm);
 body.addEventListener('click', removeEmptyColumn);
@@ -36,22 +42,23 @@ body.addEventListener('click', createColumn);
 body.addEventListener('click', createRecord);
 
 
-window.addEventListener('load', (event) => {
-    let record = new Record();
-    let records = record.get();
-    for (let i = 0; i < records.length; i++) {
-        let column = record.getColumn(records[i]);
-        if (column.length) {
-            console.log(`Look at the record below:`);
-            console.table(records[i]);
-            console.log(`And you can see it's column now!`);
-            console.table(column);
-            break;
-        }
-    }
-});
-
 // Event functions
+function displayColumnsAndRecords(event) {
+    const model = new Column();
+    const view = new DisplayColumnsWithRecords(model);
+    const controller = new IndexController(model, view);
+
+    Router.run({event: event}, controller, 'index');
+}
+
+function makeColumnsResponsive(event) {
+    const model = new NullModel();
+    const view = new NullView(model);
+    const controller = new IndexController(model, view);
+
+    Router.run({event: event}, controller, 'responsiveColumnsOnResize');
+}
+
 function showAddRecordForm(event) {
     let elemTriggered = u(event.target).closest('.js-show-add-record-form').first();
     if (elemTriggered) {

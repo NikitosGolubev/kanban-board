@@ -18,6 +18,8 @@ class NullModel extends Model {
     init() {}
     add(data) { return {}; }
     get() { return []; }
+    delete(...toDelete) { return [];}
+    dropTable() {}
 }
 
 export default NullModel;

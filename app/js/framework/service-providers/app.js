@@ -60,6 +60,7 @@ class App {
                 dom: DomManipulationLibrary
             },
             'NikitosGolubev\\Views\\Content\\EmptyColumn': {
+                dom: DomManipulationLibrary,
                 columnFactory: (columnData) => new EmptyColumnFactory(columnData)
             },
             'NikitosGolubev\\Views\\Content\\ReadyRecord': {
@@ -77,6 +78,9 @@ class App {
                 messageFactory: (messageData) => new FieldMessageFactory(messageData)
             },
             'NikitosGolubev\\Views\\Content\\DisplayColumnsWithRecords': {
+                dom: DomManipulationLibrary
+            },
+            'NikitosGolubev\\Views\\Content\\RemoveAllColumns': {
                 dom: DomManipulationLibrary
             },
             // Layouts

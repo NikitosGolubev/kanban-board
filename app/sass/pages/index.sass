@@ -77,9 +77,20 @@ $column_container_gap: 3vmin
   &__content
     word-wrap: break-word
 
-/* Add record panel */
+/* Columns controls*/
 
-.add-btn
+.column__control
+  padding: $standard_gap
+
+  &:first-child
+    border-top-left-radius: $default_border_radius
+    border-top-right-radius: $default_border_radius
+
+  &:last-child
+    border-bottom-left-radius: $default_border_radius
+    border-bottom-right-radius: $default_border_radius
+
+.columns-service-btn
   display: flex
   color: color(alternative)
   @extend %fastTransition
@@ -103,6 +114,17 @@ $column_container_gap: 3vmin
 
   &:active &__img
     fill: color(light)
+
+  &_danger
+    @extend .columns-service-btn
+    background: color(danger)
+    color: color(light)
+
+  &_danger &__img
+    fill: color(light)
+
+  &_danger:hover
+    opacity: 0.8
 
 /* Add column/record panel */
 .add-form

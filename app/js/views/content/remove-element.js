@@ -1,12 +1,12 @@
 /**
- * @fileOverview Just removes an element.
+ * @fileOverview Just removes an element from DOM.
  * @namespace NikitosGolubev\Views\Content
  */
 
 import View from '../view';
 
 /**
- * Removes element from DOM
+ * @implements View, Observer
  */
 class RemoveElement extends View {
     namespace() { return 'NikitosGolubev\\Views\\Content\\RemoveElement'; }

@@ -21,12 +21,12 @@ class AddButtonFactory extends UiFactory {
      */
     build(data) {
         let btnContainer = document.createElement('div');
-        btnContainer.classList.add('add-btn');
+        btnContainer.classList.add('columns-service-btn');
 
         // add img
         let addImgContainer = document.createElement('div');
         let svgAddImg = this.uiObjects.get('addImg').get();
-        svgAddImg.classList.add('add-btn__img');
+        svgAddImg.classList.add('columns-service-btn__img');
         addImgContainer.appendChild(svgAddImg);
 
         // button sign

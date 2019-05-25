@@ -13,6 +13,7 @@ class EmptyColumn extends View {
 
     constructor(model) {
         super(model);
+        this.dom = this.services.dom;
         this.columnFactory = this.services.columnFactory;
     }
 
@@ -27,9 +28,25 @@ class EmptyColumn extends View {
      */
     main($data = false) {
         let column = this.columnFactory().get();
-        let serviceColumn = document.querySelector('.js-last-service-column');
-        let parent  = serviceColumn.parentNode;
-        parent.insertBefore(column, serviceColumn);
+        this.displayColumn(column);
+    }
+
+    /**
+     * Displays column on the screen correctly.
+     * @param {HTMLElement} column
+     */
+    displayColumn(column) {
+        let lastGeneratedColumn = this.dom('.js-generated-column').last();
+        let columnsContainer = this.dom('.js-columns-container').first();
+
+        if (lastGeneratedColumn) {
+            // If previously generated columns exist, then pasting new column after last one.
+            this.dom(lastGeneratedColumn).after(column);
+        } else {
+            // If no columns were generated before, than it's first column,
+            // so pasting it at the beginning of columns container.
+            this.dom(columnsContainer).prepend(column);
+        }
     }
 }
 

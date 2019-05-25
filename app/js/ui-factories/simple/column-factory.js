@@ -21,6 +21,7 @@ class ColumnFactory extends UiFactory {
         // column wrap
         let column = document.createElement('section');
         column.classList.add('js-column_wrap');
+        column.classList.add('js-generated-column');
         column.classList.add('column_wrap');
         column.setAttribute('data-column-id', id);
 

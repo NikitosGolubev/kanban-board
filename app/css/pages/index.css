@@ -1,4 +1,4 @@
-.record, .add-btn, .add-btn__img, .add-form__close-img {
+.record, .columns-service-btn, .columns-service-btn_danger, .columns-service-btn__img, .add-form__close-img {
   -webkit-transition: 0.2s all;
   -o-transition: 0.2s all;
   transition: 0.2s all; }
@@ -97,8 +97,21 @@
   .record__content {
     word-wrap: break-word; }
 
-/* Add record panel */
-.add-btn {
+/* Columns controls*/
+.column__control {
+  padding: 1.7vmin; }
+  .column__control:first-child {
+    -webkit-border-top-left-radius: 3px;
+            border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+            border-top-right-radius: 3px; }
+  .column__control:last-child {
+    -webkit-border-bottom-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+            border-bottom-right-radius: 3px; }
+
+.columns-service-btn, .columns-service-btn_danger {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -109,18 +122,25 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
-  .add-btn__img {
+  .columns-service-btn__img {
     width: 2.6vmin;
     margin-right: 1.2vmin;
     fill: #6B808C; }
-  .add-btn:hover {
+  .columns-service-btn:hover, .columns-service-btn_danger:hover {
     color: #C9D2D9; }
-  .add-btn:hover .add-btn__img {
+  .columns-service-btn:hover .columns-service-btn__img, .columns-service-btn_danger:hover .columns-service-btn__img {
     fill: #C9D2D9; }
-  .add-btn:active {
+  .columns-service-btn:active, .columns-service-btn_danger:active {
     color: #fff; }
-  .add-btn:active .add-btn__img {
+  .columns-service-btn:active .columns-service-btn__img, .columns-service-btn_danger:active .columns-service-btn__img {
     fill: #fff; }
+  .columns-service-btn_danger {
+    background: #e94725;
+    color: #fff; }
+  .columns-service-btn_danger .columns-service-btn__img {
+    fill: #fff; }
+  .columns-service-btn_danger:hover {
+    opacity: 0.8; }
 
 /* Add column/record panel */
 .add-form__close-img {

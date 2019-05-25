@@ -33,29 +33,23 @@ class ReadyColumn extends View {
      * means that column is gonna be displayed at the end of columns container.
      */
     main({columnData, emptyColumn = false} = false) {
-        let serviceColumn = document.querySelector('.js-last-service-column');
-
-        let columnsContainer = serviceColumn.parentNode;
-
-        // Creating new column
+        // New column
         let readyColumn = this.columnFactory({
             title: columnData.title,
             id: columnData.id
         }).get();
 
-        // Applying  modifications to model making it more functional.
+        // Applying  modifications on column making it more functional.
         this.applyModifications(readyColumn);
 
-        // Adding new column before empty column, if it exists,
-        // otherwise paste it in the end of columns container.
-        if (emptyColumn !== false) {
-            columnsContainer.insertBefore(readyColumn, emptyColumn);
-            emptyColumn.parentNode.removeChild(emptyColumn);
-        } else {
-            columnsContainer.insertBefore(readyColumn, serviceColumn);
-        }
+        // Displaying column on the screen
+        this.displayColumn(readyColumn, emptyColumn);
     }
 
+    /**
+     * Applies some necessary modifications to column to make it more functional and accurate.
+     * @param {HTMLElement} column Created column
+     */
     applyModifications(column) {
         let druggableRecords = new DraggableRecordsInColumn();
         let scrollableColumn = new ScrollableColumn();
@@ -64,6 +58,30 @@ class ReadyColumn extends View {
         druggableRecords.main({column: column});
         scrollableColumn.main({column: column});
         stickyElements.main({column: column});
+    }
+
+    /**
+     * Displays created column on the screen correctly.
+     * @param {HTMLElement} column
+     * @param {HTMLElement|boolean} $emptyColumn Empty column
+     */
+    displayColumn(column, $emptyColumn = false) {
+        let lastGeneratedColumn = this.dom('.js-generated-column').last();
+        let columnsContainer = this.dom('.js-columns-container').first();
+
+        if ($emptyColumn !== false) {
+            // If empty column provided, it should be replaced with created column.
+            // (empty column should be removed as well)
+            this.dom($emptyColumn).before(column);
+            this.dom($emptyColumn).remove();
+        } else if (lastGeneratedColumn) {
+            // If previously generated columns exist, then pasting new column after last one.
+            this.dom(lastGeneratedColumn).after(column);
+        } else {
+            // If no columns were generated before, than it's first column,
+            // so pasting it at the beginning of columns container.
+            this.dom(columnsContainer).prepend(column);
+        }
     }
 }
 

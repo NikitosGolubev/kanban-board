@@ -26,6 +26,7 @@ import ReadyColumn from '../../views/content/ready-column';
 import ReadyRecord from '../../views/content/ready-record';
 import FieldValidationMessage from '../../views/content/validation/field-validation-message';
 import DisplayColumnsWithRecords from "../../views/content/display-columns-with-records";
+import RemoveAllColumns from "../../views/content/remove-all-columns";
 
 // DOM elements
 let body = document.querySelector('.js-page-body');
@@ -40,7 +41,7 @@ body.addEventListener('click', removeEmptyColumn);
 body.addEventListener('click', createEmptyColumn);
 body.addEventListener('click', createColumn);
 body.addEventListener('click', createRecord);
-
+body.addEventListener('click', removeAllColumnsAndRecords);
 
 // Event functions
 function displayColumnsAndRecords(event) {
@@ -52,11 +53,10 @@ function displayColumnsAndRecords(event) {
 }
 
 function makeColumnsResponsive(event) {
-    const model = new NullModel();
-    const view = new NullView(model);
-    const controller = new IndexController(model, view);
-
-    Router.run({event: event}, controller, 'responsiveColumnsOnResize');
+    let columns = document.querySelectorAll('.js-column_wrap');
+    columns.forEach((column) => {
+        column.style.width = 100+'%';
+    });
 }
 
 function showAddRecordForm(event) {
@@ -147,6 +147,28 @@ function createRecord(event) {
         const params = [
             [data, controllerValidate, 'validate'],
             [data, controllerCreate, 'store']
+        ];
+
+        Router.multipleRun(params);
+    }
+}
+
+function removeAllColumnsAndRecords(event) {
+    let elemTriggered = u(event.target).closest('.js-remove-all').first();
+    if (elemTriggered) {
+        const recordsModel = new Record();
+        const recordsView = new NullView(recordsModel);
+        const recordsController = new RecordsController(recordsModel, recordsView);
+
+        const columnsModel = new Column();
+        const columnsView = new RemoveAllColumns(columnsModel);
+        const columnsController = new RecordsController(columnsModel, columnsView);
+
+        const data = {event: event};
+
+        const params = [
+            [data, recordsController, 'removeAll'],
+            [data, columnsController, 'removeAll']
         ];
 
         Router.multipleRun(params);

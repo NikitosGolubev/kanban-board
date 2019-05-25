@@ -33,6 +33,10 @@ class Model extends Subject {
         return this.constructor.name.toLowerCase()+"s";
     }
 
+    /*** -------------------- ***/
+    /*** ABSTRACT METHODS API ***/
+    /*** -------------------- ***/
+
     /**
      * Inits model, creates table and database if needed.
      * @abstract
@@ -64,6 +68,30 @@ class Model extends Subject {
         console.error("It's an abstract method which requires implementation!");
         throw "It's an abstract method which requires implementation!";
     }
+
+    /**
+     * Deletes item from storage.
+     * @abstract
+     * @param {array} toDelete Item(-s) which are needed to be deleted
+     * @return {array} records which were deleted
+     */
+    delete(...toDelete) {
+        console.error("It's an abstract method which requires implementation!");
+        throw "It's an abstract method which requires implementation!";
+    }
+
+    /**
+     * Removes storage entirely
+     * @abstract
+     */
+    dropTable() {
+        console.error("It's an abstract method which requires implementation!");
+        throw "It's an abstract method which requires implementation!";
+    }
+
+    /*** -------------------- ***/
+    /*** COMMON METHODS API ***/
+    /*** -------------------- ***/
 
     /**
      * Searches for particular element(-s) in storage.
@@ -111,17 +139,13 @@ class Model extends Subject {
      * @see this.has()
      * @param {object} item
      * @param {string} relativesStorageName
-     * @param {null|string} $selfParamToCompare Items param which should act in comparison to identify relative.
-     * Null by default, it means that relativesStorageName would be cut to single form and supplemented with 'Id'
-     * word to form param. Example: of storage name is 'columns', then param is gonna be equal to 'columnId'
+     * @param {null|string} $selfParamToCompare Null by default, see this.makeRelativeKeyName()
      * @param {string} $relativeParamToCompare 'id' by default
      * @return {Array}
      */
-    hasOne(item, relativesStorageName, $selfParamToCompare = null, $relativeParamToCompare = 'id') {
+    hasOne(item, relativesStorageName, $selfParamToCompare = null, $relativeParamToCompare = this.primaryKey) {
         if ($selfParamToCompare === null) {
-            // Cutting (-s) from the end of provided storage name
-            let singleRecordName = relativesStorageName.substr(0, (relativesStorageName.length - 1));
-            $selfParamToCompare = singleRecordName+"Id";
+            $selfParamToCompare = this.makeRelativeKeyName(relativesStorageName);
         }
 
         return this.has(item, relativesStorageName, $selfParamToCompare, $relativeParamToCompare, false);
@@ -130,19 +154,16 @@ class Model extends Subject {
     /**
      * One to many relationship.
      * @see this.has()
+     * @see this.makeRelativeKeyName()
      * @param {object} item
      * @param {string} relativesStorageName
-     * @param {string} $selfParamToCompare 'id' by default
-     * @param {null|string} $relativeParamToCompare Null by default, it means that relativesStorageName would be
-     * cut to single form and supplemented with 'Id' word to form param.
-     * Example: storage name is 'columns', then param is gonna be equal to 'columnId'
+     * @param {string} $selfParamToCompare this.primaryKey by default
+     * @param {null|string} $relativeParamToCompare Null by default, see this.makeRelativeKeyName()
      * @return {Array}
      */
-    hasMany(item, relativesStorageName, $selfParamToCompare = 'id', $relativeParamToCompare = null) {
+    hasMany(item, relativesStorageName, $selfParamToCompare = this.primaryKey, $relativeParamToCompare = null) {
         if ($relativeParamToCompare === null) {
-            // Cutting (-s) from the end of provided storage name
-            let singleRecordName = relativesStorageName.substr(0, (relativesStorageName.length - 1));
-            $relativeParamToCompare = singleRecordName+"Id";
+            $relativeParamToCompare = this.makeRelativeKeyName(relativesStorageName);
         }
 
         return this.has(item, relativesStorageName, $selfParamToCompare, $relativeParamToCompare, true);
@@ -189,9 +210,28 @@ class Model extends Subject {
 
     /*
      * As project develops, it's reasonable to include:
-     * UPDATE, DELETE, WHERE methods.
+     * UPDATE and other methods.
      * But as they are not really required now, I omit them.
      */
+
+    /*** Helpers ***/
+
+    /**
+     * Makes relative key name based on storage name and primary key.
+     * Example: storage name is 'columns', primaryKey is 'id', then param is gonna be equal to 'columnId'
+     * @param {string} storageName
+     * @return {string}
+     */
+    makeRelativeKeyName(storageName) {
+        // Cutting (-s) from the end of provided storage name
+        let singleRecordName = storageName.substr(0, (storageName.length - 1));
+
+        // Capitalizing first letter of primary key.
+        let primaryKey = this.primaryKey.charAt(0).toUpperCase() + this.primaryKey.slice(1);
+
+        let relativeKey = singleRecordName+primaryKey;
+        return relativeKey;
+    }
 }
 
 export default Model;

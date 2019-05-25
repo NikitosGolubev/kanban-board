@@ -69,6 +69,51 @@ class LocalStorage extends Model {
         return db[$storage]; // retrieving the whole table
     }
 
+    /**
+     * @see Model.delete()
+     * @param {array} toDelete
+     * @return {Array}
+     */
+    delete(...toDelete) {
+        let db = this.getDB();
+        let items = db[this.storage];
+
+        let deletedItems = [];
+
+        // If there is no items inside table, than there is nothing to delete.
+        if (!items) return deletedItems;
+
+        // Looping through items to delete
+        for (let i = 0; i < toDelete.length; i++) {
+            let itemToDelete = toDelete[i];
+
+            // Looping through records in storage
+            for (let j = 0; j < items.length; j++) {
+                let record = items[j];
+
+                // If item to delete matches with record, than delete it.
+                if (itemToDelete[this.primaryKey] === record[this.primaryKey]) {
+                    deletedItems.push(record);
+                    items.splice(j, 1);
+                    break;
+                }
+            }
+        }
+
+        this.updateDB(db);
+
+        return deletedItems;
+    }
+
+    /**
+     * @see Model.dropTable()
+     */
+    dropTable() {
+        let db = this.getDB();
+        delete db[this.storage];
+        this.updateDB(db);
+    }
+
     /* ---------------------------------- */
     /* --- PRIVATE & PROTECTED HELPERS ***/
     /* ---------------------------------- */

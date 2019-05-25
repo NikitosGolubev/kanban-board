@@ -93,6 +93,15 @@ class EntityController extends Controller {
     }
 
     /**
+     * Removes all the entities.
+     * @param {{event: event}} data
+     */
+    removeAll(data) {
+        this.model.dropTable();
+        this.printView();
+    }
+
+    /**
      * Prepares data for display on the screen. Modifies it somehow.
      * @param {object} dataObjToDisplay Object which contains data which should be displayed.
      * To be filtered, keys must match with set params keys.

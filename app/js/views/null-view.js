@@ -16,7 +16,7 @@ class NullView extends View {
     }
 
     update(data) {}
-    main($data= false) {}
+    main($data = false) {}
 }
 
 export default NullView;

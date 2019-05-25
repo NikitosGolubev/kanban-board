@@ -17,7 +17,7 @@ class IndexController extends Controller {
 
     /**
      * Displays columns and records
-     * @param {object} data Nothing expected
+     * @param {{event: event}} data
      */
     index(data) {
         let columns = this.model.get();
@@ -26,17 +26,6 @@ class IndexController extends Controller {
 
             this.printView({column: columns[i], records: records});
         }
-    }
-
-    /**
-     * Makes columns being responsive on screen resize.
-     * @param data Nothing expected
-     */
-    responsiveColumnsOnResize(data) {
-        let columns = document.querySelectorAll('.js-column_wrap');
-        columns.forEach((column) => {
-            column.style.width = 100+'%';
-        });
     }
 }
 

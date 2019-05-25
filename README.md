@@ -19,41 +19,41 @@ https://nikitosgolubev.github.io/kanbanBoard/
 
 ## Структура проекта
 Фреймворк находится в директории **app - папки для рзработки**. В **dist** располагается собранный с помощью GULP проект.
-- bootstrap
-    * routers
-- build
-- configs
-    * default.js
-- controllers
-    * controller.js
-- entites
-- framework
-    * service-providers
-        + app.js
-        + service-provider.js
-    * core.js
-    * router.js
-- handlers
-    * handler.js
-    * default-handler.js
-- models
-    * content
-    * types
-    * model.js
-    * subject.js
-    * null-model.js
-- services
-- ui-factories
-    * simple
-        + ui-factory.js
-- use-cases
-- views
-    * content
-    * layouts
-    * layout.js
-    * null-view.js
-    * observer.js
-    * view.js
+- [bootstrap](#bootstrap)
+    * [routers](#routers)
+- [build](#build)
+- [configs](#configs)
+    * [default.js](#defaultjs)
+- [controllers](#controllers)
+    * [controller.js](#controllerjs)
+- [entities](#entities)
+- [framework](#framework)
+    * [service-providers](#service-providers)
+        + [app.js](#appjs)
+        + [service-provider.js](#service-providerjs)
+    * [core.js](#corejs)
+    * [router.js](#router)
+- [handlers](#handlers)
+    * [handler.js](#handlerjs)
+    * [default-handler.js](#default-handlerjs)
+- [models](#models)
+    * [content](#content)
+    * [types](#types)
+    * [model.js](#modeljs)
+    * [subject.js](#subjectjs)
+    * [null-model.js](#null-modeljs)
+- [services](#services)
+- [ui-factories](#ui-factories)
+    * [simple](#simple)
+        + [ui-factory.js](#ui-factoryjs)
+- [use-cases](#use-cases)
+- [views](#views)
+    * [content](#content)
+    * [layouts](#layouts)
+    * [layout.js](#layoutjs)
+    * [null-view.js](#null-viewjs)
+    * [observer.js](#observerjs)
+    * [view.js](#viewjs)
     
 <a name="bootstrap"><h2>Bootstrap</h2></a>
 Папка начальной загрузки, содержит в себе файлы, являющиеся start-point-ами приложения.

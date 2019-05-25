@@ -3,6 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="bbee861d-1471-4dfd-acca-b5586725a129" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/build/routers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/build/routers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/models/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/models/model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/js/views/content/remove-element.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/views/content/remove-element.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/pages/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/build/routers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/build/routers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/build/ui-adjusters/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/sass/pages/index.sass" beforeDir="false" afterPath="$PROJECT_DIR$/dist/sass/pages/index.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsdoc.json" beforeDir="false" afterPath="$PROJECT_DIR$/jsdoc.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,44 +37,7 @@
     <favorites_list name="kanban-board" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" column="49" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/sass/responsivity/index.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-19">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/sass/responsivity/main.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="606">
-              <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/sass/pages/index.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" selection-start-line="14" selection-end-line="19" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -85,7 +57,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/js/services/validator/validation-response.js" />
         <option value="$PROJECT_DIR$/app/js/services/validation-pointer/validation-pointer.js" />
         <option value="$PROJECT_DIR$/app/js/services/validation-pointer/dom-validation-pointer.js" />
         <option value="$PROJECT_DIR$/app/js/services/mutator/mutator.js" />
@@ -121,21 +92,22 @@
         <option value="$PROJECT_DIR$/app/js/ui-factories/simple/add-button-factory.js" />
         <option value="$PROJECT_DIR$/app/sass/pages/index.sass" />
         <option value="$PROJECT_DIR$/app/js/models/content/ls-type/column.js" />
-        <option value="$PROJECT_DIR$/app/js/models/model.js" />
         <option value="$PROJECT_DIR$/app/js/models/types/local-storage.js" />
         <option value="$PROJECT_DIR$/app/js/models/null-model.js" />
         <option value="$PROJECT_DIR$/app/js/controllers/index-controller.js" />
         <option value="$PROJECT_DIR$/app/js/controllers/entities-management/entity-controller.js" />
-        <option value="$PROJECT_DIR$/app/js/views/content/remove-element.js" />
         <option value="$PROJECT_DIR$/app/js/bootstrap/routers/index.js" />
         <option value="$PROJECT_DIR$/app/js/views/content/remove-all-columns.js" />
         <option value="$PROJECT_DIR$/app/js/views/content/empty-column.js" />
         <option value="$PROJECT_DIR$/app/js/framework/service-providers/app.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
-        <option value="$PROJECT_DIR$/app/sass/responsivity/index.sass" />
         <option value="$PROJECT_DIR$/app/sass/main.sass" />
         <option value="$PROJECT_DIR$/app/sass/responsivity/helpers/_font-size-change.sass" />
+        <option value="$PROJECT_DIR$/app/sass/responsivity/index.sass" />
         <option value="$PROJECT_DIR$/app/sass/responsivity/main.sass" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/jsdoc.json" />
+        <option value="$PROJECT_DIR$/app/js/models/model.js" />
+        <option value="$PROJECT_DIR$/app/js/views/content/remove-element.js" />
       </list>
     </option>
   </component>
@@ -249,152 +221,6 @@
             <path>
               <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="bootstrap" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="bootstrap" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="routers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="controllers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="controllers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="entities-management" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="framework" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="framework" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="service-providers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="models" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="models" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="models" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ls-type" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="models" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="types" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ui-factories" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ui-factories" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="simple" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="content" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="sass" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="sass" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="sass" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="responsivity" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="sass" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="responsivity" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="helpers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -693,12 +519,12 @@
       <workItem from="1558600062401" duration="4543000" />
       <workItem from="1558632439471" duration="10550000" />
       <workItem from="1558694094850" duration="7406000" />
-      <workItem from="1558783259382" duration="12041000" />
+      <workItem from="1558783259382" duration="13518000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="288671000" />
+    <option name="totallyTimeSpent" value="290148000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -710,13 +536,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5021216" side_tool="true" weight="0.20107238" />
       <window_info id="Gulp" order="1" sideWeight="0.5007072" side_tool="true" weight="0.19034852" />
       <window_info id="Favorites" order="2" sideWeight="0.5021216" side_tool="true" weight="0.20107238" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.49787837" visible="true" weight="0.21447721" />
+      <window_info content_ui="combo" id="Project" order="3" sideWeight="0.49787837" visible="true" weight="0.21447721" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -727,7 +552,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32956153" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32673267" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.71570015" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -763,23 +588,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/js/views/content/validation/validation-view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-819">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/entities-management/records-controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="26" column="61" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
-          <folding>
-            <element signature="e#120#171#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/views/content/validation/field-validation-message.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1100">
@@ -865,18 +673,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/bootstrap/ui-adjusters/index.js" />
-    <entry file="file://$PROJECT_DIR$/dist/js/build/routers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-900" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/views/view.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-244" />
@@ -951,13 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/models/model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="84" column="16" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/models/types/local-storage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -995,13 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/views/content/remove-element.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -1064,27 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/sass/pages/index.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" selection-start-line="14" selection-end-line="19" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="49" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sass/responsivity/index.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/sass/main.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="379">
@@ -1106,11 +867,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/sass/pages/index.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/sass/responsivity/main.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+        <state relative-caret-position="6">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sass/responsivity/index.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/views/content/remove-element.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/models/model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="51" column="67" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsdoc.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="65" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/css/pages/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/js/build/routers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2400" />
       </provider>
     </entry>
   </component>

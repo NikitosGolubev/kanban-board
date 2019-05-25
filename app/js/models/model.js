@@ -49,7 +49,7 @@ class Model extends Subject {
     /**
      * Adds data to some storage.
      * @abstract
-     * @param {{columnName: function, ....}} data
+     * @param {{property: function}} data {property: getter, ....}  Expected
      * @return {object} Record which were added.
      */
     add(data) {

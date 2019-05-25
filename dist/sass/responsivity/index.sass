@@ -1,0 +1,13 @@
+@import ../settings
+
+@media screen and (max-aspect-ratio: 1000/750)
+  .columns-container
+      grid-template-columns: repeat(3, 1fr)
+
+@media screen and (max-aspect-ratio: 1000/1000)
+  .columns-container
+    grid-template-columns: repeat(2, 1fr)
+
+@media screen and (max-aspect-ratio: 1000/1300) and (max-width: 515px)
+  .columns-container
+    grid-template-columns: repeat(1, 1fr)

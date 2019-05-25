@@ -22,7 +22,7 @@ class RemoveElement extends View {
 
     /**
      * Removes element from DOM.
-     * @param $data Expects {element: DOMElemToRemove}
+     * @param {object} $data Expects {element: DOMElemToRemove}
      */
     main($data = false) {
         let parent = $data.element.parentNode;

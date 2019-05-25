@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: views/content/empty-column.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: views/content/empty-column.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @fileOverview Creates new empty column which user may fill with data in future.
+ * @namespace NikitosGolubev\Views\Content
+ */
+
+import View from '../view';
+
+/**
+ * @implements View, Observer
+ */
+class EmptyColumn extends View {
+    namespace() { return 'NikitosGolubev\\Views\\Content\\EmptyColumn'; }
+
+    constructor(model) {
+        super(model);
+        this.dom = this.services.dom;
+        this.columnFactory = this.services.columnFactory;
+    }
+
+    /**
+     * @see Observer.update()
+     */
+    update(data) {}
+
+    /**
+     * @see View.main()
+     * @param {object} $data Expected: Nothing
+     */
+    main($data = false) {
+        let column = this.columnFactory().get();
+        this.displayColumn(column);
+    }
+
+    /**
+     * Displays column on the screen correctly.
+     * @param {HTMLElement} column
+     */
+    displayColumn(column) {
+        let lastGeneratedColumn = this.dom('.js-generated-column').last();
+        let columnsContainer = this.dom('.js-columns-container').first();
+
+        if (lastGeneratedColumn) {
+            // If previously generated columns exist, then pasting new column after last one.
+            this.dom(lastGeneratedColumn).after(column);
+        } else {
+            // If no columns were generated before, than it's first column,
+            // so pasting it at the beginning of columns container.
+            this.dom(columnsContainer).prepend(column);
+        }
+    }
+}
+
+export default EmptyColumn;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="AddButtonFactory.html">AddButtonFactory</a></li><li><a href="AddFormContainerFactory.html">AddFormContainerFactory</a></li><li><a href="AddRecordButtonFactory.html">AddRecordButtonFactory</a></li><li><a href="AddRecordForm.html">AddRecordForm</a></li><li><a href="AddRecordFormFactory.html">AddRecordFormFactory</a></li><li><a href="AddSvgImgFactory.html">AddSvgImgFactory</a></li><li><a href="App.html">App</a></li><li><a href="ButtonFactory.html">ButtonFactory</a></li><li><a href="CloseBtnFactory.html">CloseBtnFactory</a></li><li><a href="Column.html">Column</a></li><li><a href="ColumnBodyFactory.html">ColumnBodyFactory</a></li><li><a href="ColumnFactory.html">ColumnFactory</a></li><li><a href="ColumnFooterFactory.html">ColumnFooterFactory</a></li><li><a href="ColumnHeaderFactory.html">ColumnHeaderFactory</a></li><li><a href="ColumnsController.html">ColumnsController</a></li><li><a href="Controller.html">Controller</a></li><li><a href="Core.html">Core</a></li><li><a href="Create.html">Create</a></li><li><a href="CreateColumn.html">CreateColumn</a></li><li><a href="CreateColumnFormFactory.html">CreateColumnFormFactory</a></li><li><a href="CreateRecord.html">CreateRecord</a></li><li><a href="DataToDisplayMutator.html">DataToDisplayMutator</a></li><li><a href="DefaultHandler.html">DefaultHandler</a></li><li><a href="DisplayColumnsWithRecords.html">DisplayColumnsWithRecords</a></li><li><a href="DomValidationPointer.html">DomValidationPointer</a></li><li><a href="DraggableRecordsInColumn.html">DraggableRecordsInColumn</a></li><li><a href="EmptyColumn.html">EmptyColumn</a></li><li><a href="EmptyColumnFactory.html">EmptyColumnFactory</a></li><li><a href="Entity.html">Entity</a></li><li><a href="EntityController.html">EntityController</a></li><li><a href="EntityServiceProvider.html">EntityServiceProvider</a></li><li><a href="FieldMessageFactory.html">FieldMessageFactory</a></li><li><a href="FieldValidationMessage.html">FieldValidationMessage</a></li><li><a href="FormControlsContainerFactory.html">FormControlsContainerFactory</a></li><li><a href="IndexController.html">IndexController</a></li><li><a href="Layout.html">Layout</a></li><li><a href="LocalStorage.html">LocalStorage</a></li><li><a href="Model.html">Model</a></li><li><a href="Mutator.html">Mutator</a></li><li><a href="NullModel.html">NullModel</a></li><li><a href="NullView.html">NullView</a></li><li><a href="Observer.html">Observer</a></li><li><a href="ReadyColumn.html">ReadyColumn</a></li><li><a href="ReadyColumnFactory.html">ReadyColumnFactory</a></li><li><a href="ReadyRecord.html">ReadyRecord</a></li><li><a href="ReadyRecordFactory.html">ReadyRecordFactory</a></li><li><a href="Record.html">Record</a></li><li><a href="RecordsController.html">RecordsController</a></li><li><a href="RemoveAddRecordForm.html">RemoveAddRecordForm</a></li><li><a href="RemoveAllColumns.html">RemoveAllColumns</a></li><li><a href="RemoveElement.html">RemoveElement</a></li><li><a href="RequestDataStorage.html">RequestDataStorage</a></li><li><a href="Router.html">Router</a></li><li><a href="ScrollableColumn.html">ScrollableColumn</a></li><li><a href="ServiceProvider.html">ServiceProvider</a></li><li><a href="StickyElementsInColumn.html">StickyElementsInColumn</a></li><li><a href="Subject.html">Subject</a></li><li><a href="TextareaFactory.html">TextareaFactory</a></li><li><a href="TextInputFactory.html">TextInputFactory</a></li><li><a href="UiFactory.html">UiFactory</a></li><li><a href="UserInputMutator.html">UserInputMutator</a></li><li><a href="ValidateColumn.html">ValidateColumn</a></li><li><a href="ValidateRecord.html">ValidateRecord</a></li><li><a href="ValidationPointer.html">ValidationPointer</a></li><li><a href="ValidationResponse.html">ValidationResponse</a></li><li><a href="ValidationView.html">ValidationView</a></li><li><a href="Validator.html">Validator</a></li></ul><h3>Namespaces</h3><ul><li><a href="NikitosGolubev_Bootstrap_Routers.html">NikitosGolubev\Bootstrap\Routers</a></li><li><a href="NikitosGolubev_Configs.html">NikitosGolubev\Configs</a></li><li><a href="NikitosGolubev_Controllers.html">NikitosGolubev\Controllers</a></li><li><a href="NikitosGolubev_Controllers_EntitiesManagement.html">NikitosGolubev\Controllers\EntitiesManagement</a></li><li><a href="NikitosGolubev_Entities.html">NikitosGolubev\Entities</a></li><li><a href="NikitosGolubev_Framework.html">NikitosGolubev\Framework</a></li><li><a href="NikitosGolubev_Framework_ServiceProviders.html">NikitosGolubev\Framework\ServiceProviders</a></li><li><a href="NikitosGolubev_Framework_ServiceProviders_Concrete.html">NikitosGolubev\Framework\ServiceProviders\Concrete</a></li><li><a href="NikitosGolubev_Handlers.html">NikitosGolubev\Handlers</a></li><li><a href="NikitosGolubev_Models.html">NikitosGolubev\Models</a></li><li><a href="NikitosGolubev_Models_Content_CookieType_Record.html">NikitosGolubev\Models\Content\CookieType\Record</a></li><li><a href="NikitosGolubev_Models_Types.html">NikitosGolubev\Models\Types</a></li><li><a href="NikitosGolubev_Services_Mutator.html">NikitosGolubev\Services\Mutator</a></li><li><a href="NikitosGolubev_Services_RequestDataStorage.html">NikitosGolubev\Services\RequestDataStorage</a></li><li><a href="NikitosGolubev_Services_ValidationPointer.html">NikitosGolubev\Services\ValidationPointer</a></li><li><a href="NikitosGolubev_Services_Validator.html">NikitosGolubev\Services\Validator</a></li><li><a href="NikitosGolubev_Services_Validator_Concrete.html">NikitosGolubev\Services\Validator\Concrete</a></li><li><a href="NikitosGolubev_UiFactories_Simple.html">NikitosGolubev\UiFactories\Simple</a></li><li><a href="NikitosGolubev_UseCases_Create.html">NikitosGolubev\UseCases\Create</a></li><li><a href="NikitosGolubev_Views.html">NikitosGolubev\Views</a></li><li><a href="NikitosGolubev_Views_Content.html">NikitosGolubev\Views\Content</a></li><li><a href="NikitosGolubev_Views_Layouts.html">NikitosGolubev\Views\Layouts</a></li></ul><h3>Interfaces</h3><ul><li><a href="Handler.html">Handler</a></li><li><a href="View.html">View</a></li></ul><h3>Global</h3><ul><li><a href="global.html#config">config</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat May 25 2019 18:04:36 GMT+0300 (RTZ 2 (зима))
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

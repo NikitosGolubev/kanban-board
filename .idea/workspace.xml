@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbee861d-1471-4dfd-acca-b5586725a129" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/css/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/pages/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/bootstrap/routers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/bootstrap/routers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/build/routers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/build/routers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/controllers/entities-management/entity-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/controllers/entities-management/entity-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/controllers/index-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/controllers/index-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/framework/service-providers/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/framework/service-providers/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/models/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/models/model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/models/null-model.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/models/null-model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/models/types/local-storage.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/models/types/local-storage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/ui-factories/simple/add-button-factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/ui-factories/simple/add-button-factory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/ui-factories/simple/column-factory.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/ui-factories/simple/column-factory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/views/content/empty-column.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/views/content/empty-column.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/views/content/ready-column.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/views/content/ready-column.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/views/content/remove-element.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/views/content/remove-element.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/js/views/null-view.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/js/views/null-view.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/sass/pages/index.sass" beforeDir="false" afterPath="$PROJECT_DIR$/app/sass/pages/index.sass" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,11 +29,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="45" />
+            <state relative-caret-position="350">
+              <caret line="14" column="49" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/sass/responsivity/index.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-19">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/sass/responsivity/main.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="606">
+              <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/sass/pages/index.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="14" selection-start-line="14" selection-end-line="19" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -63,16 +74,17 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>font-size</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/js/controllers/records-controller.js" />
-        <option value="$PROJECT_DIR$/app/js/services/validator/concrete/validate-column.js" />
-        <option value="$PROJECT_DIR$/app/js/controllers/columns-controller.js" />
-        <option value="$PROJECT_DIR$/app/js/services/validator/validator.js" />
         <option value="$PROJECT_DIR$/app/js/services/validator/validation-response.js" />
         <option value="$PROJECT_DIR$/app/js/services/validation-pointer/validation-pointer.js" />
         <option value="$PROJECT_DIR$/app/js/services/validation-pointer/dom-validation-pointer.js" />
@@ -107,7 +119,6 @@
         <option value="$PROJECT_DIR$/app/js/ui-factories/simple/column-factory.js" />
         <option value="$PROJECT_DIR$/app/js/views/content/ready-column.js" />
         <option value="$PROJECT_DIR$/app/js/ui-factories/simple/add-button-factory.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/sass/pages/index.sass" />
         <option value="$PROJECT_DIR$/app/js/models/content/ls-type/column.js" />
         <option value="$PROJECT_DIR$/app/js/models/model.js" />
@@ -120,6 +131,11 @@
         <option value="$PROJECT_DIR$/app/js/views/content/remove-all-columns.js" />
         <option value="$PROJECT_DIR$/app/js/views/content/empty-column.js" />
         <option value="$PROJECT_DIR$/app/js/framework/service-providers/app.js" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/sass/responsivity/index.sass" />
+        <option value="$PROJECT_DIR$/app/sass/main.sass" />
+        <option value="$PROJECT_DIR$/app/sass/responsivity/helpers/_font-size-change.sass" />
+        <option value="$PROJECT_DIR$/app/sass/responsivity/main.sass" />
       </list>
     </option>
   </component>
@@ -364,6 +380,21 @@
               <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="sass" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="pages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sass" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="responsivity" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="kanban-board" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Nikitos\Desktop\GitHubProjects\kanban-board" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sass" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="responsivity" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="helpers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -662,12 +693,12 @@
       <workItem from="1558600062401" duration="4543000" />
       <workItem from="1558632439471" duration="10550000" />
       <workItem from="1558694094850" duration="7406000" />
-      <workItem from="1558783259382" duration="10216000" />
+      <workItem from="1558783259382" duration="12041000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="286846000" />
+    <option name="totallyTimeSpent" value="288671000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -679,7 +710,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5021216" side_tool="true" weight="0.20107238" />
@@ -732,34 +763,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/js/framework/core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services/validator/concrete/validate-column.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-519">
-          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/services/validator/concrete/validate-record.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="73" column="47" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/ui-factories/simple/ready-record-factory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/views/content/validation/validation-view.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-819">
@@ -934,18 +937,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/sass/pages/index.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="126" column="16" selection-start-line="126" selection-start-column="16" selection-end-line="126" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/sass/_settings.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1125" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/js/models/content/ls-type/record.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1073,10 +1064,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/sass/pages/index.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" selection-start-line="14" selection-end-line="19" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="45" />
+        <state relative-caret-position="350">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sass/responsivity/index.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sass/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="125" column="10" lean-forward="true" selection-end-line="131" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sass/responsivity/helpers/_font-size-change.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sass/_settings.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="11" selection-start-line="11" selection-end-line="26" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/sass/responsivity/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
         </state>
       </provider>
     </entry>

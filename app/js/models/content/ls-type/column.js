@@ -14,6 +14,7 @@ class Column extends LocalStorage {
 
     constructor() {
         super();
+        this.storage = 'columns';
     }
 
     /**

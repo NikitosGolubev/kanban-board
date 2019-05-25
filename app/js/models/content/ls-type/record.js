@@ -14,6 +14,7 @@ class Record extends LocalStorage {
 
     constructor() {
         super();
+        this.storage = 'records';
     }
 
     /**
